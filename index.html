@@ -1,0 +1,458 @@
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap');
+
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --ink:#0f0e0d;
+  --ink2:#3a3834;
+  --ink3:#7a7670;
+  --gold:#b8955a;
+  --gold2:#d4b07a;
+  --gold3:#f0e6d0;
+  --surface:#faf8f4;
+  --white:#ffffff;
+  --rule:rgba(184,149,90,0.25);
+}
+body{font-family:'DM Sans',sans-serif;background:var(--surface);color:var(--ink);font-size:15px;line-height:1.6;}
+
+nav{position:sticky;top:0;z-index:100;background:rgba(250,248,244,0.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--rule);padding:0 3rem;}
+.nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px;}
+.logo{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;letter-spacing:0.02em;color:var(--ink);cursor:pointer;}
+.logo span{color:var(--gold);}
+.nav-links{display:flex;gap:2rem;}
+.nav-links a{font-size:13px;font-weight:400;color:var(--ink2);text-decoration:none;letter-spacing:0.06em;text-transform:uppercase;cursor:pointer;transition:color .2s;}
+.nav-links a:hover{color:var(--gold);}
+.nav-cta{background:var(--ink);color:var(--white);border:none;padding:9px 20px;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;cursor:pointer;transition:background .2s;}
+.nav-cta:hover{background:var(--gold);}
+
+.page{display:none;min-height:80vh;}
+.page.active{display:block;}
+
+/* HOME */
+.hero{max-width:1200px;margin:0 auto;padding:7rem 3rem 5rem;display:grid;grid-template-columns:1fr 420px;gap:4rem;align-items:center;}
+.hero-eyebrow{font-size:11px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;display:flex;align-items:center;gap:10px;}
+.hero-eyebrow::before{content:'';display:block;width:32px;height:1px;background:var(--gold);}
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:58px;font-weight:500;line-height:1.1;letter-spacing:-0.01em;margin-bottom:1.5rem;}
+.hero h1 em{font-style:italic;color:var(--gold);}
+.hero-sub{font-size:16px;color:var(--ink2);line-height:1.7;max-width:520px;margin-bottom:2.5rem;}
+.btn-primary{display:inline-flex;align-items:center;gap:8px;background:var(--ink);color:var(--white);padding:14px 28px;font-size:12px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;border:none;transition:background .2s;}
+.btn-primary:hover{background:var(--gold);}
+.btn-primary::after{content:'→';}
+.hero-card{background:var(--white);border:1px solid var(--rule);padding:2.5rem;}
+.hero-card-title{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:500;margin-bottom:1.5rem;padding-bottom:1rem;border-bottom:1px solid var(--rule);}
+.metric-row{display:flex;flex-direction:column;gap:1.25rem;}
+.metric-item{display:flex;align-items:flex-start;gap:1rem;}
+.metric-num{font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:600;color:var(--gold);line-height:1;min-width:90px;}
+.metric-label{font-size:13px;color:var(--ink2);line-height:1.4;}
+
+.ribbon{background:var(--ink);padding:1.25rem 3rem;}
+.ribbon-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,0.1);}
+.ribbon-item{background:var(--ink);padding:1.75rem 2rem;}
+.ribbon-val{font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:600;color:var(--gold2);margin-bottom:4px;}
+.ribbon-desc{font-size:12px;color:rgba(255,255,255,0.55);line-height:1.4;}
+
+.pillars{max-width:1200px;margin:0 auto;padding:5rem 3rem;}
+.section-header{margin-bottom:3rem;}
+.section-tag{font-size:11px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:.75rem;}
+.section-title{font-family:'Cormorant Garamond',serif;font-size:40px;font-weight:500;line-height:1.15;}
+.pillar-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);}
+.pillar{background:var(--surface);padding:2.5rem;cursor:pointer;transition:background .2s;}
+.pillar:hover{background:var(--white);}
+.pillar-num{font-family:'Cormorant Garamond',serif;font-size:48px;font-weight:400;color:var(--gold3);margin-bottom:1rem;line-height:1;}
+.pillar h3{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:500;margin-bottom:.75rem;}
+.pillar p{font-size:14px;color:var(--ink2);line-height:1.6;}
+
+/* SOLUTIONS */
+.solutions-hero{background:var(--ink);color:var(--white);padding:5rem 3rem 4rem;}
+.solutions-hero-inner{max-width:1200px;margin:0 auto;}
+.solutions-hero .section-tag{color:var(--gold2);}
+.solutions-hero h2{font-family:'Cormorant Garamond',serif;font-size:50px;font-weight:500;line-height:1.1;max-width:700px;}
+.solutions-hero p{color:rgba(255,255,255,0.6);font-size:15px;margin-top:1rem;max-width:560px;}
+
+.solutions-body{max-width:1200px;margin:0 auto;padding:4rem 3rem;}
+.solution-block{display:grid;grid-template-columns:280px 1fr;gap:3rem;padding:3rem 0;border-bottom:1px solid var(--rule);}
+.solution-block:last-child{border-bottom:none;}
+.sol-label{font-family:'Cormorant Garamond',serif;font-size:15px;color:var(--gold);font-style:italic;}
+.sol-num{font-family:'Cormorant Garamond',serif;font-size:72px;font-weight:400;color:var(--gold3);line-height:1;margin-top:.25rem;}
+.sol-content h3{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:500;margin-bottom:1rem;}
+.sol-content p{font-size:14px;color:var(--ink2);line-height:1.7;margin-bottom:1.5rem;}
+.sol-tags{display:flex;flex-wrap:wrap;gap:8px;}
+.sol-tag{font-size:11px;letter-spacing:0.08em;text-transform:uppercase;padding:5px 12px;border:1px solid var(--rule);color:var(--ink3);}
+
+/* CASE STUDIES */
+.cases-header{max-width:1200px;margin:0 auto;padding:5rem 3rem 3rem;}
+.cases-grid{max-width:1200px;margin:0 auto;padding:0 3rem 5rem;display:grid;gap:2px;}
+.case-card{display:grid;grid-template-columns:1fr 1fr;background:var(--white);border:1px solid var(--rule);overflow:hidden;}
+.case-left{padding:3rem;border-right:1px solid var(--rule);}
+.case-right{padding:3rem;}
+.case-tag{font-size:11px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;}
+.case-card h3{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:500;line-height:1.2;margin-bottom:1rem;}
+.case-challenge{font-size:14px;color:var(--ink2);line-height:1.7;}
+.case-metric-big{font-family:'Cormorant Garamond',serif;font-size:72px;font-weight:600;color:var(--gold);line-height:1;margin-bottom:.5rem;}
+.case-metric-label{font-size:13px;color:var(--ink2);margin-bottom:2rem;}
+.case-detail h4{font-size:12px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink3);margin-bottom:.5rem;}
+.case-detail p{font-size:14px;color:var(--ink2);line-height:1.6;margin-bottom:1.5rem;}
+
+/* ABOUT */
+.about-split{max-width:1200px;margin:0 auto;padding:5rem 3rem;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;}
+.about-left{}
+.about-quote{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:400;font-style:italic;line-height:1.4;color:var(--ink);margin-bottom:2rem;padding-left:1.5rem;border-left:2px solid var(--gold);}
+.about-bio{font-size:14px;color:var(--ink2);line-height:1.8;margin-bottom:1.5rem;}
+.timeline{margin-top:2rem;}
+.tl-item{display:flex;gap:1.5rem;margin-bottom:1.5rem;}
+.tl-dot{width:8px;height:8px;border-radius:50%;background:var(--gold);margin-top:6px;flex-shrink:0;}
+.tl-text{}
+.tl-label{font-size:12px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);margin-bottom:3px;}
+.tl-desc{font-size:14px;color:var(--ink2);line-height:1.5;}
+.cred-grid{display:grid;gap:1px;background:var(--rule);}
+.cred-item{background:var(--white);padding:1.5rem 2rem;}
+.cred-item h4{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:500;margin-bottom:.4rem;}
+.cred-item p{font-size:13px;color:var(--ink2);}
+.tech-section{margin-top:2rem;padding-top:2rem;border-top:1px solid var(--rule);}
+.tech-title{font-size:12px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink3);margin-bottom:1rem;}
+.tech-chips{display:flex;flex-wrap:wrap;gap:8px;}
+.tech-chip{font-size:12px;padding:4px 12px;background:var(--surface);border:1px solid var(--rule);color:var(--ink2);}
+
+/* CONTACT */
+.contact-layout{max-width:1200px;margin:0 auto;padding:5rem 3rem;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;}
+.contact-left h2{font-family:'Cormorant Garamond',serif;font-size:48px;font-weight:500;line-height:1.1;margin-bottom:1.5rem;}
+.contact-left p{font-size:15px;color:var(--ink2);line-height:1.7;margin-bottom:2.5rem;}
+.contact-detail{display:flex;align-items:center;gap:1rem;margin-bottom:1.25rem;}
+.contact-icon{width:38px;height:38px;border:1px solid var(--rule);display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0;}
+.contact-info{}
+.contact-info-label{font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin-bottom:2px;}
+.contact-info-val{font-size:14px;color:var(--ink);}
+.audit-card{background:var(--ink);color:var(--white);padding:2.5rem;margin-top:2rem;}
+.audit-card h3{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:500;color:var(--gold2);margin-bottom:.75rem;}
+.audit-card p{font-size:13px;color:rgba(255,255,255,0.6);line-height:1.7;margin-bottom:1.5rem;}
+.btn-audit{display:inline-block;border:1px solid var(--gold);color:var(--gold);padding:10px 22px;font-size:12px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;cursor:pointer;background:none;transition:all .2s;}
+.btn-audit:hover{background:var(--gold);color:var(--ink);}
+
+footer{background:var(--ink);color:rgba(255,255,255,0.4);text-align:center;padding:2rem 3rem;font-size:12px;letter-spacing:0.05em;}
+</style>
+
+<nav>
+  <div class="nav-inner">
+    <div class="logo" onclick="showPage('home')">Rocke<span>Logic</span></div>
+    <div class="nav-links">
+      <a onclick="showPage('home')">Home</a>
+      <a onclick="showPage('solutions')">Solutions</a>
+      <a onclick="showPage('cases')">Case Studies</a>
+      <a onclick="showPage('about')">About</a>
+      <a onclick="showPage('contact')">Contact</a>
+    </div>
+    <button class="nav-cta" onclick="showPage('contact')">Request Consultation</button>
+  </div>
+</nav>
+
+<!-- HOME -->
+<div class="page active" id="page-home">
+  <section class="hero">
+    <div>
+      <div class="hero-eyebrow">25 Years · BFSI Executive Leadership</div>
+      <h1>Certainty in<br>Complex Banking<br>& <em>AI Transformations</em></h1>
+      <p class="hero-sub">Orchestrating multi-million-dollar portfolios for Global Systemically Important Banks with over two decades of technical and P&L leadership.</p>
+      <button class="btn-primary" onclick="showPage('contact')">Request a Strategic Consultation</button>
+    </div>
+    <div class="hero-card">
+      <div class="hero-card-title">Engagement Track Record</div>
+      <div class="metric-row">
+        <div class="metric-item">
+          <div class="metric-num">$8M+</div>
+          <div class="metric-label">Annual technology budgets governed across G-SIB accounts</div>
+        </div>
+        <div class="metric-item">
+          <div class="metric-num">100+</div>
+          <div class="metric-label">Global engineering professionals led across distributed teams</div>
+        </div>
+        <div class="metric-item">
+          <div class="metric-num">75%</div>
+          <div class="metric-label">Improvement in time-to-market — 6 months compressed to 6 weeks</div>
+        </div>
+        <div class="metric-item">
+          <div class="metric-num">6.9/7</div>
+          <div class="metric-label">Average CSAT across all G-SIB client engagements</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="ribbon">
+    <div class="ribbon-inner">
+      <div class="ribbon-item">
+        <div class="ribbon-val">$800K</div>
+        <div class="ribbon-desc">Annual recurring savings from automation ROI</div>
+      </div>
+      <div class="ribbon-item">
+        <div class="ribbon-val">G-SIB</div>
+        <div class="ribbon-desc">Citigroup · Morgan Stanley · Marsh Inc.</div>
+      </div>
+      <div class="ribbon-item">
+        <div class="ribbon-val">30%</div>
+        <div class="ribbon-desc">Revenue expansion from high-stakes vendor transition</div>
+      </div>
+      <div class="ribbon-item">
+        <div class="ribbon-val">SAFe 5</div>
+        <div class="ribbon-desc">Certified Agilist · PM Elite II · MBA Finance</div>
+      </div>
+    </div>
+  </div>
+
+  <section class="pillars">
+    <div class="section-header">
+      <div class="section-tag">Service Pillars</div>
+      <div class="section-title">Where We Create<br>Lasting Value</div>
+    </div>
+    <div class="pillar-grid">
+      <div class="pillar">
+        <div class="pillar-num">01</div>
+        <h3>Core Banking Modernization</h3>
+        <p>Specialized in the "last-mile" integration of cloud-native platforms like FIS MBP and the CAPE framework — bridging legacy infrastructure with modern SaaS architectures.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-num">02</div>
+        <h3>Operational Intelligence & Automation</h3>
+        <p>Transforming SDLC from high-risk manual processes to API-driven, GitOps-managed pipelines that deliver 75% faster time-to-market.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-num">03</div>
+        <h3>Regulatory & Risk Orchestration</h3>
+        <p>End-to-end deployment of NICE Actimize, AML, and fraud detection systems embedded within core transaction flows and regulatory compliance stacks.</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- SOLUTIONS -->
+<div class="page" id="page-solutions">
+  <div class="solutions-hero">
+    <div class="solutions-hero-inner">
+      <div class="section-tag">Solutions & Expertise</div>
+      <h2>Technical Grit. Strategic Vision. Measurable Outcomes.</h2>
+      <p>Two decades of deep-domain practice across core banking, payments, risk, and AI-driven value stream transformation.</p>
+    </div>
+  </div>
+  <div class="solutions-body">
+    <div class="solution-block">
+      <div>
+        <div class="sol-label">Section I</div>
+        <div class="sol-num">01</div>
+      </div>
+      <div class="sol-content">
+        <h3>Core Banking & Payments Ecosystems</h3>
+        <p>We provide the technical grit to bridge legacy systems with modern SaaS architectures. Our practice covers the full complexity of banking platform integration — from framework consumption to final Go/No-Go authority.</p>
+        <p><strong>Framework Layering:</strong> Consuming CAPE framework snapshots to build high-performance business layers for Retail and Commercial Lending. Our architecture ensures clean separation of concerns while maximizing platform throughput.</p>
+        <p><strong>Payment Rail Integration:</strong> Seamlessly orchestrating Zelle, ACH, and VISA PaymentsOne for true global transactionality across retail and commercial channels.</p>
+        <p><strong>Platform Stabilization:</strong> Exercising final Go/No-Go authority to ensure zero-defect production rollouts — protecting your reputation and client trust at every release.</p>
+        <div class="sol-tags">
+          <span class="sol-tag">FIS MBP</span><span class="sol-tag">CAPE Framework</span><span class="sol-tag">Zelle</span><span class="sol-tag">ACH</span><span class="sol-tag">VISA PaymentsOne</span><span class="sol-tag">Core Banking</span>
+        </div>
+      </div>
+    </div>
+    <div class="solution-block">
+      <div>
+        <div class="sol-label">Section II</div>
+        <div class="sol-num">02</div>
+      </div>
+      <div class="sol-content">
+        <h3>Strategic Value Stream Leadership</h3>
+        <p>Transitioning organizations from "output-focused" to "outcome-driven" value streams. We implement SAFe-aligned models that deliver developer productivity gains of 30–40% while maintaining rigorous P&L accountability.</p>
+        <p><strong>SAFe Transformation:</strong> Full implementation of SAFe-aligned Value Stream models, including PI planning, ART launch, and continuous delivery pipeline design. Developer productivity improvements of 30–40% measured within 90 days.</p>
+        <p><strong>P&L & Commercial Governance:</strong> Full lifecycle management of SOWs, RFP responses, and WBS-based effort estimations — ensuring commercial clarity at every stage of engagement.</p>
+        <div class="sol-tags">
+          <span class="sol-tag">SAFe 5 Agilist</span><span class="sol-tag">Value Streams</span><span class="sol-tag">SOW Management</span><span class="sol-tag">WBS Estimation</span><span class="sol-tag">GitOps</span><span class="sol-tag">API Architecture</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CASES -->
+<div class="page" id="page-cases">
+  <div class="cases-header">
+    <div class="section-tag">Proof of Value</div>
+    <div class="section-title">Results That<br>Justify the Mandate</div>
+  </div>
+  <div class="cases-grid">
+    <div class="case-card">
+      <div class="case-left">
+        <div class="case-tag">Case Study 01 · Automation ROI</div>
+        <h3>The $800K<br>Automation Return</h3>
+        <p class="case-challenge">A manual, SQL-dependent release process created significant BA bottlenecks and operational risk across a major G-SIB's core banking delivery pipeline. Each release cycle consumed weeks of high-skill engineering time with zero scalability headroom.</p>
+      </div>
+      <div class="case-right">
+        <div class="case-metric-big">$800K</div>
+        <div class="case-metric-label">Annual recurring savings generated</div>
+        <div class="case-detail">
+          <h4>The Solution</h4>
+          <p>Engineered a fully API-based Release Management platform enabling configuration and deployment without any manual SQL edits — eliminating the bottleneck at its root.</p>
+          <h4>The Outcomes</h4>
+          <p>70% reduction in release workload. 30% reduction in BA effort. $800,000 in verified annual recurring savings with zero regression to prior manual processes.</p>
+        </div>
+      </div>
+    </div>
+    <div class="case-card">
+      <div class="case-left">
+        <div class="case-tag">Case Study 02 · G-SIB Transition</div>
+        <h3>High-Stakes<br>Vendor Transition</h3>
+        <p class="case-challenge">A critical incumbent vendor transition for a major banking program under a tight 3-month mandate. Client confidence had eroded; delivery capacity was insufficient. The engagement required immediate structural intervention.</p>
+      </div>
+      <div class="case-right">
+        <div class="case-metric-big">+30%</div>
+        <div class="case-metric-label">Revenue expansion post-transition</div>
+        <div class="case-detail">
+          <h4>The Solution</h4>
+          <p>Spearheaded a structured hiring and upskilling plan, scaling delivery capacity from critical shortage to 35 fully productive resources within mandate timelines.</p>
+          <h4>The Outcomes</h4>
+          <p>Client confidence fully restored within 90 days. Program delivered on schedule. Engagement expanded with a 30% revenue growth driven by the demonstrated delivery excellence.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<div class="page" id="page-about">
+  <div class="about-split">
+    <div class="about-left">
+      <div class="section-tag">About RockeLogic</div>
+      <div class="section-title" style="margin-bottom:2rem;">Founded on<br>Technical Excellence</div>
+      <div class="about-quote">"An IT executive who rose from core J2EE engineering to P&L-accountable leadership for the world's largest banks."</div>
+      <p class="about-bio">RockeLogic was founded by Rocke F. Fashy, a practitioner who has navigated the full arc of banking technology — from hands-on architecture to executive mandate. This dual fluency in code and commerce is what sets RockeLogic apart.</p>
+      <p class="about-bio">Six years of onsite US leadership at Citigroup, Morgan Stanley, and Marsh Inc. provided the deep client intimacy that only proximity can build. Today, that experience anchors every engagement.</p>
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-text">
+            <div class="tl-label">Citigroup</div>
+            <div class="tl-desc">Onsite US delivery leadership across core banking and payments transformation programs</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-text">
+            <div class="tl-label">Morgan Stanley</div>
+            <div class="tl-desc">Technical program leadership for risk and regulatory compliance platforms</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-text">
+            <div class="tl-label">Marsh Inc.</div>
+            <div class="tl-desc">Enterprise architecture and SDLC modernization for global insurance infrastructure</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="about-right">
+      <div class="cred-grid">
+        <div class="cred-item">
+          <h4>MBA — Systems & Finance</h4>
+          <p>Advanced management education with dual specialization in technology systems and financial markets</p>
+        </div>
+        <div class="cred-item">
+          <h4>B.E. — Electrical & Electronics</h4>
+          <p>Engineering foundation underpinning a career of technical precision and architectural rigor</p>
+        </div>
+        <div class="cred-item">
+          <h4>Certified SAFe 5 Agilist</h4>
+          <p>Scaled Agile Framework practitioner certified at the highest enterprise delivery level</p>
+        </div>
+        <div class="cred-item">
+          <h4>PM Elite II</h4>
+          <p>Advanced project management certification for complex, multi-stakeholder programs</p>
+        </div>
+        <div class="cred-item">
+          <h4>AI-Driven Transformation</h4>
+          <p>Expert practitioner: MS Copilot & GitHub Copilot applied to process intelligence and developer velocity</p>
+        </div>
+      </div>
+      <div class="tech-section">
+        <div class="tech-title">Technical Domain Depth</div>
+        <div class="tech-chips">
+          <span class="tech-chip">Kafka</span><span class="tech-chip">Event Brokers</span><span class="tech-chip">J2EE</span><span class="tech-chip">Mainframe OS/2</span><span class="tech-chip">DB2</span><span class="tech-chip">NICE Actimize</span><span class="tech-chip">AML Systems</span><span class="tech-chip">GitOps</span><span class="tech-chip">API Architecture</span><span class="tech-chip">GitHub Copilot</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<div class="page" id="page-contact">
+  <div class="contact-layout">
+    <div class="contact-left">
+      <div class="section-tag">Secure Your Transformation</div>
+      <h2>Begin a<br>Strategic<br>Conversation</h2>
+      <p>RockeLogic engages selectively with organizations committed to meaningful transformation. Every inquiry receives a direct, substantive response from the principal.</p>
+      <div class="contact-detail">
+        <div class="contact-icon">✦</div>
+        <div class="contact-info">
+          <div class="contact-info-label">Location</div>
+          <div class="contact-info-val">Bangalore, India · Global Consulting</div>
+        </div>
+      </div>
+      <div class="contact-detail">
+        <div class="contact-icon">✆</div>
+        <div class="contact-info">
+          <div class="contact-info-label">Direct Line</div>
+          <div class="contact-info-val">+91 88617 52000</div>
+        </div>
+      </div>
+      <div class="contact-detail">
+        <div class="contact-icon">✉</div>
+        <div class="contact-info">
+          <div class="contact-info-label">Email</div>
+          <div class="contact-info-val">rockefashy@gmail.com</div>
+        </div>
+      </div>
+      <div class="audit-card">
+        <h3>Fixed-Price Digital Audit</h3>
+        <p>A structured, time-boxed engagement to identify automation opportunities within your existing Core Banking value streams. Delivered with a clear findings report and prioritized recommendations — no open-ended retainer required to begin.</p>
+        <button class="btn-audit">Enquire About the Audit</button>
+      </div>
+    </div>
+    <div class="contact-right" style="padding-top:1rem;">
+      <div style="background:var(--white);border:1px solid var(--rule);padding:2.5rem;">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:500;margin-bottom:1.5rem;padding-bottom:1rem;border-bottom:1px solid var(--rule);">Consultation Request</div>
+        <div style="display:flex;flex-direction:column;gap:1rem;">
+          <div>
+            <div style="font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink3);margin-bottom:6px;">Full Name</div>
+            <input type="text" placeholder="Your name" style="width:100%;padding:10px 14px;border:1px solid var(--rule);background:var(--surface);font-family:'DM Sans',sans-serif;font-size:14px;color:var(--ink);outline:none;">
+          </div>
+          <div>
+            <div style="font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink3);margin-bottom:6px;">Organisation</div>
+            <input type="text" placeholder="Your organisation" style="width:100%;padding:10px 14px;border:1px solid var(--rule);background:var(--surface);font-family:'DM Sans',sans-serif;font-size:14px;color:var(--ink);outline:none;">
+          </div>
+          <div>
+            <div style="font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink3);margin-bottom:6px;">Engagement Type</div>
+            <select style="width:100%;padding:10px 14px;border:1px solid var(--rule);background:var(--surface);font-family:'DM Sans',sans-serif;font-size:14px;color:var(--ink);outline:none;">
+              <option>Core Banking Modernization</option>
+              <option>Operational Intelligence & Automation</option>
+              <option>Regulatory & Risk Orchestration</option>
+              <option>Fixed-Price Digital Audit</option>
+              <option>Strategic Advisory</option>
+            </select>
+          </div>
+          <div>
+            <div style="font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink3);margin-bottom:6px;">Brief</div>
+            <textarea placeholder="Describe your transformation challenge..." style="width:100%;padding:10px 14px;border:1px solid var(--rule);background:var(--surface);font-family:'DM Sans',sans-serif;font-size:14px;color:var(--ink);outline:none;resize:vertical;min-height:100px;"></textarea>
+          </div>
+          <button onclick="alert('Thank you. Rocke will be in touch directly.')" style="background:var(--ink);color:var(--white);border:none;padding:13px 24px;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;width:100%;margin-top:.5rem;">Submit Request →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  © 2025 RockeLogic · Bangalore, India · Global Consulting · rockefashy@gmail.com
+</footer>
+
+<script>
+function showPage(id) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.getElementById('page-' + id).classList.add('active');
+  window.scrollTo({top: 0, behavior: 'smooth'});
+}
+</script>
