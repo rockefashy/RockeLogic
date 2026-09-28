@@ -7,14 +7,24 @@
   <meta name="robots" content="noindex, nofollow">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;800&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   
   <style>
     * { margin:0; padding:0; box-sizing:border-box; }
+    :root {
+      --ink: #0f0e0d;
+      --ink2: #3a3834;
+      --ink3: #7a7670;
+      --gold: #b8955a;
+      --gold2: #d4b07a;
+      --surface: #faf8f4;
+      --white: #ffffff;
+      --rule: rgba(184, 149, 90, 0.25);
+    }
     body {
-      background-color: #070a12;
-      color: #f8fafc;
-      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: var(--surface);
+      color: var(--ink);
+      font-family: 'DM Sans', sans-serif;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
@@ -22,56 +32,34 @@
       justify-content: center;
       padding: 2rem 1.5rem;
       text-align: center;
-      position: relative;
-      overflow-x: hidden;
-    }
-    .ambient {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 600px;
-      height: 600px;
-      background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, rgba(16, 185, 129, 0.08) 40%, transparent 70%);
-      pointer-events: none;
-      z-index: 0;
     }
     .card {
-      background: #0f1629;
-      border: 1px solid rgba(59, 130, 246, 0.35);
-      border-radius: 20px;
-      padding: 3.5rem 2.5rem;
+      background: var(--white);
+      border: 1px solid var(--rule);
+      padding: 3.5rem 3rem;
       max-width: 580px;
       width: 100%;
-      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
-      position: relative;
-      z-index: 1;
+      box-shadow: 0 4px 25px rgba(15, 14, 13, 0.05);
     }
-    .success-icon {
-      width: 68px;
-      height: 68px;
-      border-radius: 50%;
-      background: rgba(16, 185, 129, 0.15);
-      border: 2px solid #10b981;
-      color: #34d399;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 30px;
-      margin: 0 auto 1.75rem;
+    .success-mark {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 32px;
+      color: var(--gold);
+      margin-bottom: 1.25rem;
     }
     h1 {
-      font-family: 'Outfit', sans-serif;
-      font-size: 2.2rem;
-      font-weight: 700;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.5rem;
+      font-weight: 500;
+      color: var(--ink);
       margin-bottom: 1rem;
-      line-height: 1.2;
+      line-height: 1.15;
     }
     p {
-      color: #94a3b8;
+      color: var(--ink2);
       font-size: 15px;
       line-height: 1.7;
-      margin-bottom: 2rem;
+      margin-bottom: 2.25rem;
     }
     .btn-group {
       display: flex;
@@ -84,51 +72,50 @@
       justify-content: center;
       gap: 10px;
       padding: 13px 26px;
-      border-radius: 8px;
-      font-weight: 600;
-      font-size: 14px;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
       text-decoration: none;
       transition: all 0.2s ease;
     }
     .btn-primary {
-      background: linear-gradient(135deg, #2563eb, #1d4ed8);
-      color: #ffffff;
-      box-shadow: 0 4px 18px rgba(37, 99, 235, 0.35);
+      background: var(--ink);
+      color: var(--white);
     }
     .btn-primary:hover {
-      background: linear-gradient(135deg, #3b82f6, #2563eb);
-      transform: translateY(-1px);
+      background: var(--gold);
     }
     .btn-whatsapp {
-      background: rgba(16, 185, 129, 0.15);
-      border: 1px solid rgba(16, 185, 129, 0.3);
-      color: #6ee7b7;
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      color: #166534;
     }
     .btn-whatsapp:hover {
-      background: rgba(16, 185, 129, 0.25);
+      background: #dcfce7;
     }
     .footer-note {
       margin-top: 2rem;
       font-size: 12px;
-      color: #64748b;
+      color: var(--ink3);
+      letter-spacing: 0.04em;
     }
   </style>
 </head>
 <body>
-  <div class="ambient"></div>
   <div class="card">
-    <div class="success-icon">✓</div>
-    <h1>Request Received</h1>
+    <div class="success-mark">✦</div>
+    <h1>Consultation Request<br>Received</h1>
     <p>
       Thank you for contacting <strong>RockeLogic Technology Partners</strong>.<br>
-      Your launch brief has been delivered. <strong>Rocke Fashy</strong> will review your requirements and reach out to you within 24 hours.
+      Your launch brief has been registered. <strong>Rocke Fashy</strong> will personally review your requirements and reach out within 24 hours.
     </p>
     <div class="btn-group">
       <a href="https://wa.me/919444423567?text=Hi%20Rocke,%20I%20just%20submitted%20a%20launch%20consultation%20request%20on%20rockelogic.com" target="_blank" class="btn btn-whatsapp">
         <span>💬 Message Rocke on WhatsApp</span>
       </a>
       <a href="/" class="btn btn-primary">
-        <span>← Return to Home</span>
+        <span>Return to Home →</span>
       </a>
     </div>
     <div class="footer-note">
