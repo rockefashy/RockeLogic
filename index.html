@@ -814,74 +814,106 @@
       line-height: 1.7;
     }
 
-    /* COMPARISON */
-    .comparison-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2rem;
-    }
-
-    .comparison-card {
+    /* COMPARISON MATRIX TABLE */
+    .table-responsive {
+      width: 100%;
+      overflow-x: auto;
       border-radius: var(--radius-md);
-      padding: 2.5rem;
-      position: relative;
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-surface);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+      -webkit-overflow-scrolling: touch;
     }
 
-    .card-pain {
-      background: rgba(239, 68, 68, 0.03);
-      border: 1px solid rgba(239, 68, 68, 0.15);
-    }
-
-    .card-solution {
-      background: rgba(59, 130, 246, 0.05);
-      border: 1px solid var(--border-accent);
-      box-shadow: 0 10px 30px rgba(37, 99, 235, 0.12);
-    }
-
-    .card-badge-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 1.5rem;
-      padding-bottom: 1rem;
-      border-bottom: 1px solid var(--border-subtle);
-    }
-
-    .card-title {
-      font-size: 1.35rem;
-      margin-bottom: 0.75rem;
-    }
-
-    .comparison-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 1.15rem;
-      margin-top: 1.5rem;
-    }
-
-    .comp-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
+    .matrix-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
       font-size: 14px;
-      line-height: 1.5;
+      min-width: 680px;
     }
 
-    .comp-icon-bad {
-      color: #ef4444;
-      font-size: 16px;
+    .matrix-table th, .matrix-table td {
+      padding: 1.25rem 1.5rem;
+      border-bottom: 1px solid var(--border-subtle);
+      vertical-align: middle;
+    }
+
+    .matrix-table th {
+      background: #0b1120;
+      font-family: 'Outfit', sans-serif;
+      font-size: 15px;
       font-weight: 700;
-      flex-shrink: 0;
+      color: var(--text-main);
+      letter-spacing: -0.01em;
+    }
+
+    .matrix-table th.col-rockelogic, .matrix-table td.col-rockelogic {
+      background: rgba(59, 130, 246, 0.08);
+      border-left: 2px solid var(--blue-primary);
+      border-right: 2px solid var(--blue-primary);
+    }
+
+    .matrix-table th.col-rockelogic {
+      background: rgba(37, 99, 235, 0.22);
+      color: #ffffff;
+      border-top: 2px solid var(--blue-primary);
+    }
+
+    .matrix-table tr:last-child td.col-rockelogic {
+      border-bottom: 2px solid var(--blue-primary);
+    }
+
+    .matrix-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .matrix-feature-name {
+      font-weight: 700;
+      color: #ffffff;
+      font-size: 15px;
+    }
+
+    .matrix-feature-sub {
+      font-size: 12px;
+      color: var(--text-dim);
       margin-top: 2px;
     }
 
-    .comp-icon-good {
-      color: #10b981;
-      font-size: 16px;
+    .status-cell {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+    }
+
+    .cell-good {
+      color: #34d399;
+      font-weight: 600;
+    }
+
+    .cell-warn {
+      color: #fbbf24;
+      font-weight: 500;
+    }
+
+    .cell-bad {
+      color: #f87171;
+      font-weight: 500;
+    }
+
+    .rec-badge {
+      display: inline-block;
+      font-size: 10px;
       font-weight: 700;
-      flex-shrink: 0;
-      margin-top: 2px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      background: linear-gradient(135deg, #2563eb, #06b6d4);
+      color: #ffffff;
+      padding: 3px 8px;
+      border-radius: 4px;
+      margin-left: 8px;
+      vertical-align: middle;
     }
 
     /* THE 3-PILLAR LAUNCHPAD */
@@ -1554,6 +1586,7 @@
 
         <ul class="nav-menu">
           <li><a href="#pillars" class="nav-link">What We Build</a></li>
+          <li><a href="#comparison" class="nav-link">Why Us</a></li>
           <li><a href="#showcase" class="nav-link">SmartPen Showcase</a></li>
           <li><a href="#seo" class="nav-link">SEO Framework</a></li>
           <li><a href="#process" class="nav-link">30-Day Launchpad</a></li>
@@ -1723,71 +1756,84 @@
       </div>
     </section>
 
-    <!-- THE PROBLEM VS SOLUTION -->
-    <section class="section-padding">
+    <!-- COMPARISON TABLE SECTION -->
+    <section class="section-padding" id="comparison">
       <div class="container">
         <div class="section-header">
-          <div class="section-eyebrow">The Solopreneur Dilemma</div>
-          <h2 class="section-title">Why Most Founders Get Trapped In "Launch Limbo"</h2>
+          <div class="section-eyebrow">The "Why Us" Factor</div>
+          <h2 class="section-title">Straightforward Assessment: Why RockeLogic Matters</h2>
           <p class="section-desc">
-            Building a serious digital business requires legal compliance, high-end portal architecture, automated payment funnels, and organic discoverability. When you try to assemble the pieces yourself, execution halts.
+            How our turnkey launch partnership compares to DIY website builders and unpredictable freelance developers.
           </p>
         </div>
 
-        <div class="comparison-grid">
-          <!-- The Old Way -->
-          <div class="comparison-card card-pain">
-            <div class="card-badge-header">
-              <h3 class="card-title">The Fragmented Freelance Route</h3>
-              <span class="badge" style="background:rgba(239,68,68,0.15);color:#fca5a5;">High Stress & Delay</span>
-            </div>
-            <p style="color:var(--text-muted);font-size:14px;">You spend your valuable time managing four separate vendors who point fingers at each other:</p>
-            <ul class="comparison-list">
-              <li class="comp-item">
-                <span class="comp-icon-bad">✕</span>
-                <span><strong>Legal Delays:</strong> A separate CA or agent taking months to explain company registration, GST, and compliances.</span>
-              </li>
-              <li class="comp-item">
-                <span class="comp-icon-bad">✕</span>
-                <span><strong>Cookie-Cutter Websites:</strong> DIY website builders that look generic, load slowly, and break when you add courses or memberships.</span>
-              </li>
-              <li class="comp-item">
-                <span class="comp-icon-bad">✕</span>
-                <span><strong>Zero Organic SEO:</strong> No structured data, no canonical tags, slow Core Web Vitals — your site remains invisible on Google.</span>
-              </li>
-              <li class="comp-item">
-                <span class="comp-icon-bad">✕</span>
-                <span><strong>Payment Chaos:</strong> Broken webhooks, failed UPI checkouts, and missed revenue due to poor gateway integration.</span>
-              </li>
-            </ul>
-          </div>
-
-          <!-- The RockeLogic Way -->
-          <div class="comparison-card card-solution">
-            <div class="card-badge-header">
-              <h3 class="card-title">The RockeLogic Partner Route</h3>
-              <span class="badge badge-green"><span class="badge-dot"></span> Turnkey in 30 Days</span>
-            </div>
-            <p style="color:var(--text-muted);font-size:14px;">A single, elite technology partner who handles the entire stack so you can focus on teaching and selling:</p>
-            <ul class="comparison-list">
-              <li class="comp-item">
-                <span class="comp-icon-good">✓</span>
-                <span><strong>Full Company Registration:</strong> Entity incorporation, GST compliance, and banking setup done with zero confusion.</span>
-              </li>
-              <li class="comp-item">
-                <span class="comp-icon-good">✓</span>
-                <span><strong>Bespoke Web Portal (like SmartPen Academy):</strong> Custom student/client dashboards, secure video hosting, and automated onboarding.</span>
-              </li>
-              <li class="comp-item">
-                <span class="comp-icon-good">✓</span>
-                <span><strong>Built-In Technical SEO Framework:</strong> Automatic JSON-LD course schemas, XML sitemaps, OpenGraph previews, and Google Search Console indexing.</span>
-              </li>
-              <li class="comp-item">
-                <span class="comp-icon-good">✓</span>
-                <span><strong>Automated Payment Rails:</strong> Instant integration with Razorpay, Stripe, and UPI for seamless global & domestic transactions.</span>
-              </li>
-            </ul>
-          </div>
+        <div class="table-responsive">
+          <table class="matrix-table">
+            <thead>
+              <tr>
+                <th style="width: 25%;">Feature</th>
+                <th style="width: 25%;">DIY Website Builders<br><span style="font-size: 12px; font-weight: 400; color: var(--text-dim);">(Wix / Squarespace)</span></th>
+                <th style="width: 25%;">Disjointed Freelancers<br><span style="font-size: 12px; font-weight: 400; color: var(--text-dim);">(Upwork / Fiverr)</span></th>
+                <th class="col-rockelogic" style="width: 25%;">RockeLogic Technology Partners <span class="rec-badge">Turnkey</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="matrix-feature-name">Company Registration</div>
+                  <div class="matrix-feature-sub">Pvt Ltd, LLP, OPC & GST compliance</div>
+                </td>
+                <td><span class="status-cell cell-bad">❌ None</span></td>
+                <td><span class="status-cell cell-bad">❌ None</span></td>
+                <td class="col-rockelogic"><span class="status-cell cell-good">✅ Done for you</span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="matrix-feature-name">Custom Web Portal</div>
+                  <div class="matrix-feature-sub">Bespoke design, student/client dashboard</div>
+                </td>
+                <td><span class="status-cell cell-warn">⚠️ Generic templates</span></td>
+                <td><span class="status-cell cell-warn">⚠️ Hit or miss quality</span></td>
+                <td class="col-rockelogic"><span class="status-cell cell-good">✅ Custom-built & tailored</span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="matrix-feature-name">Payment & Tech Setup</div>
+                  <div class="matrix-feature-sub">Razorpay, Stripe, UPI & automated receipts</div>
+                </td>
+                <td><span class="status-cell cell-warn">⚠️ Complicated plugins</span></td>
+                <td><span class="status-cell cell-bad">❌ Separate developer needed</span></td>
+                <td class="col-rockelogic"><span class="status-cell cell-good">✅ Fully integrated & tested</span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="matrix-feature-name">Built-In SEO Framework</div>
+                  <div class="matrix-feature-sub">JSON-LD Schema, XML sitemaps & Core Web Vitals</div>
+                </td>
+                <td><span class="status-cell cell-warn">⚠️ Basic DIY meta tags</span></td>
+                <td><span class="status-cell cell-bad">❌ Expensive afterthought</span></td>
+                <td class="col-rockelogic"><span class="status-cell cell-good">✅ Rich Schema & Day-1 Google Indexing</span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="matrix-feature-name">Accountability</div>
+                  <div class="matrix-feature-sub">Who owns the outcome when something breaks?</div>
+                </td>
+                <td><span class="status-cell cell-bad">❌ Self-serve (No support)</span></td>
+                <td><span class="status-cell cell-bad">❌ Disjointed & ghosting risk</span></td>
+                <td class="col-rockelogic"><span class="status-cell cell-good">✅ Single dedicated partner</span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="matrix-feature-name">Time to Launch</div>
+                  <div class="matrix-feature-sub">From idea to live revenue generation</div>
+                </td>
+                <td><span style="color: var(--text-muted); font-size: 14px;">3–6 months of trial & error</span></td>
+                <td><span style="color: var(--text-muted); font-size: 14px;">Unpredictable delays</span></td>
+                <td class="col-rockelogic"><span style="color: #60a5fa; font-weight: 700; font-size: 15px;">Under 30 Days</span></td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </section>
