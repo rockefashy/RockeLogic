@@ -2346,7 +2346,10 @@
       }
     }
 
-    // Lead Form Handler with Client-Side Feedback & Netlify compatibility
+    // Optional: Connect to a Google Sheet (SheetDB or Google Apps Script Webhook)
+    const GOOGLE_SHEET_WEBHOOK = ""; // Paste your SheetDB or Google Apps Script Web App URL here to dual-sync
+
+    // Lead Form Handler with Netlify DB, Local DB & Google Sheets Dual-Sync
     function handleFormSubmit(event) {
       event.preventDefault();
       const form = event.target;
@@ -2356,25 +2359,36 @@
         confirmPhone.textContent = phoneVal;
       }
 
-      // If on Netlify or standard form submit environment
       const submitBtn = document.getElementById('submit-request-btn');
       submitBtn.disabled = true;
-      submitBtn.innerHTML = '<span>Processing Request...</span>';
+      submitBtn.innerHTML = '<span>Saving Request...</span>';
 
-      // Submit via fetch if supported, fallback to immediate success display
       const formData = new FormData(form);
-      fetch('/', {
+      const urlEncoded = new URLSearchParams(formData).toString();
+
+      // 1. Primary Save: Netlify Form DB (in production) or local leads.json (on localhost)
+      const primaryRequest = fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(formData).toString()
-      })
-      .then(() => {
-        showSuccess();
-      })
-      .catch(() => {
-        // Fallback gracefully so the user is never stranded
-        showSuccess();
+        body: urlEncoded
       });
+
+      // 2. Secondary Save: Google Sheet Sync (if configured)
+      if (GOOGLE_SHEET_WEBHOOK) {
+        try {
+          const leadObject = Object.fromEntries(formData);
+          leadObject.timestamp = new Date().toLocaleString();
+          fetch(GOOGLE_SHEET_WEBHOOK, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ data: [leadObject] })
+          }).catch(() => {});
+        } catch (err) {}
+      }
+
+      primaryRequest
+        .then(() => showSuccess())
+        .catch(() => showSuccess());
 
       function showSuccess() {
         document.getElementById('form-success-banner').style.display = 'block';
