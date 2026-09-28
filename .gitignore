@@ -1,0 +1,13 @@
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Node / local server
+node_modules/
+npm-debug.log*
+
+# IDE & temporary
+.vscode/
+.idea/
+*.log

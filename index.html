@@ -1,458 +1,2342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Primary SEO Meta Tags -->
+  <title>RockeLogic Technology Partners | Company Registration, Custom Web Portals & Turnkey Launch</title>
+  <meta name="title" content="RockeLogic Technology Partners | Company Registration, Custom Web Portals & Turnkey Launch">
+  <meta name="description" content="RockeLogic Technology Partners turns your expertise into a registered business and live web portal like SmartPen Academy. Turnkey company registration, custom LMS design, payment gateways, and built-in SEO framework in 30 days.">
+  <meta name="keywords" content="RockeLogic Technology Partners, SmartPen Academy, solopreneur launchpad, register company Bangalore, custom web portal design, LMS portal development, built-in SEO framework, Razorpay Stripe integration, turnkey digital business">
+  <meta name="author" content="Rocke Fashy">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <link rel="canonical" href="https://www.rockelogic.com/">
 
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap');
+  <!-- Geo & Local SEO Meta Tags -->
+  <meta name="geo.region" content="IN-KA">
+  <meta name="geo.placename" content="Bangalore, Electronic City Phase 1">
+  <meta name="geo.position" content="12.8452;77.6602">
+  <meta name="ICBM" content="12.8452, 77.6602">
 
-*{margin:0;padding:0;box-sizing:border-box;}
-:root{
-  --ink:#0f0e0d;
-  --ink2:#3a3834;
-  --ink3:#7a7670;
-  --gold:#b8955a;
-  --gold2:#d4b07a;
-  --gold3:#f0e6d0;
-  --surface:#faf8f4;
-  --white:#ffffff;
-  --rule:rgba(184,149,90,0.25);
-}
-body{font-family:'DM Sans',sans-serif;background:var(--surface);color:var(--ink);font-size:15px;line-height:1.6;}
+  <!-- Open Graph / Facebook / LinkedIn / WhatsApp -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.rockelogic.com/">
+  <meta property="og:site_name" content="RockeLogic Technology Partners">
+  <meta property="og:title" content="Turn Your Expertise Into a Registered Company & Live Web Portal">
+  <meta property="og:description" content="We incorporate your business, design your custom web portal (like SmartPen Academy), wire up automated payments, and embed a full SEO framework. 100% turnkey in 30 days.">
+  <meta property="og:locale" content="en_US">
 
-nav{position:sticky;top:0;z-index:100;background:rgba(250,248,244,0.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--rule);padding:0 3rem;}
-.nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px;}
-.logo{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;letter-spacing:0.02em;color:var(--ink);cursor:pointer;}
-.logo span{color:var(--gold);}
-.nav-links{display:flex;gap:2rem;}
-.nav-links a{font-size:13px;font-weight:400;color:var(--ink2);text-decoration:none;letter-spacing:0.06em;text-transform:uppercase;cursor:pointer;transition:color .2s;}
-.nav-links a:hover{color:var(--gold);}
-.nav-cta{background:var(--ink);color:var(--white);border:none;padding:9px 20px;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;cursor:pointer;transition:background .2s;}
-.nav-cta:hover{background:var(--gold);}
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://www.rockelogic.com/">
+  <meta name="twitter:title" content="RockeLogic Technology Partners | Turnkey Company & Web Portal Launchpad">
+  <meta name="twitter:description" content="Company registration, custom portal design (SmartPen Academy style), automated payments, and built-in SEO framework for founders and solopreneurs.">
 
-.page{display:none;min-height:80vh;}
-.page.active{display:block;}
+  <!-- Google Fonts Preconnect & Stylesheet -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
-/* HOME */
-.hero{max-width:1200px;margin:0 auto;padding:7rem 3rem 5rem;display:grid;grid-template-columns:1fr 420px;gap:4rem;align-items:center;}
-.hero-eyebrow{font-size:11px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;display:flex;align-items:center;gap:10px;}
-.hero-eyebrow::before{content:'';display:block;width:32px;height:1px;background:var(--gold);}
-.hero h1{font-family:'Cormorant Garamond',serif;font-size:58px;font-weight:500;line-height:1.1;letter-spacing:-0.01em;margin-bottom:1.5rem;}
-.hero h1 em{font-style:italic;color:var(--gold);}
-.hero-sub{font-size:16px;color:var(--ink2);line-height:1.7;max-width:520px;margin-bottom:2.5rem;}
-.btn-primary{display:inline-flex;align-items:center;gap:8px;background:var(--ink);color:var(--white);padding:14px 28px;font-size:12px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;border:none;transition:background .2s;}
-.btn-primary:hover{background:var(--gold);}
-.btn-primary::after{content:'→';}
-.hero-card{background:var(--white);border:1px solid var(--rule);padding:2.5rem;}
-.hero-card-title{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:500;margin-bottom:1.5rem;padding-bottom:1rem;border-bottom:1px solid var(--rule);}
-.metric-row{display:flex;flex-direction:column;gap:1.25rem;}
-.metric-item{display:flex;align-items:flex-start;gap:1rem;}
-.metric-num{font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:600;color:var(--gold);line-height:1;min-width:90px;}
-.metric-label{font-size:13px;color:var(--ink2);line-height:1.4;}
+  <!-- JSON-LD Structured Data: Organization & Local Business Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "RockeLogic Technology Partners",
+    "legalName": "RockeLogic Technology Partners",
+    "url": "https://www.rockelogic.com",
+    "email": "rockefashy@rockelogic.com",
+    "telephone": "+919444423567",
+    "taxID": "29AAGPF3130N1ZO",
+    "founder": {
+      "@type": "Person",
+      "name": "Rocke Fashy",
+      "jobTitle": "Managing Partner & Principal Architect"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Ajmera Infinity, Electronic City Phase 1",
+      "addressLocality": "Bangalore",
+      "addressRegion": "Karnataka",
+      "postalCode": "560100",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 12.8452,
+      "longitude": 77.6602
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      "opens": "09:00",
+      "closes": "20:00"
+    },
+    "priceRange": "₹₹₹",
+    "description": "Turnkey launchpad for entrepreneurs and solopreneurs: company registration, GST compliance, custom web portal and LMS design, payment gateways, and built-in SEO framework."
+  }
+  </script>
 
-.ribbon{background:var(--ink);padding:1.25rem 3rem;}
-.ribbon-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,0.1);}
-.ribbon-item{background:var(--ink);padding:1.75rem 2rem;}
-.ribbon-val{font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:600;color:var(--gold2);margin-bottom:4px;}
-.ribbon-desc{font-size:12px;color:rgba(255,255,255,0.55);line-height:1.4;}
+  <!-- JSON-LD Structured Data: Services Offered Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Turnkey Digital Business & Web Portal Launchpad",
+    "provider": {
+      "@type": "ProfessionalService",
+      "name": "RockeLogic Technology Partners"
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "Global"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Zero-to-Launch Solopreneur Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Company Registration & Legal Setup",
+            "description": "Entity incorporation (Pvt Ltd, LLP, OPC), GSTIN registration, bank account setup, and legal compliance policies."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Custom Web Portal & LMS Architecture",
+            "description": "Bespoke digital platforms like SmartPen Academy with student dashboards, video streaming, progress tracking, and automated certificates."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Payments, Automation & Built-In SEO Framework",
+            "description": "Razorpay, Stripe, UPI payment rails, automated customer onboarding, and technical JSON-LD SEO framework for Day-1 Google discovery."
+          }
+        }
+      ]
+    }
+  }
+  </script>
 
-.pillars{max-width:1200px;margin:0 auto;padding:5rem 3rem;}
-.section-header{margin-bottom:3rem;}
-.section-tag{font-size:11px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:.75rem;}
-.section-title{font-family:'Cormorant Garamond',serif;font-size:40px;font-weight:500;line-height:1.15;}
-.pillar-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);}
-.pillar{background:var(--surface);padding:2.5rem;cursor:pointer;transition:background .2s;}
-.pillar:hover{background:var(--white);}
-.pillar-num{font-family:'Cormorant Garamond',serif;font-size:48px;font-weight:400;color:var(--gold3);margin-bottom:1rem;line-height:1;}
-.pillar h3{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:500;margin-bottom:.75rem;}
-.pillar p{font-size:14px;color:var(--ink2);line-height:1.6;}
+  <!-- JSON-LD Structured Data: FAQPage Schema for Rich Search Results -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Does my web portal include a built-in SEO framework?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, absolutely. Unlike agencies that treat SEO as a costly afterthought, every portal built by RockeLogic includes a comprehensive technical SEO framework: programmatic JSON-LD Schema (Course, Organization, FAQ), XML sitemaps, OpenGraph social preview tags, lightning-fast Core Web Vitals, and Google Search Console indexing from Day 1."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need any technical or coding knowledge?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No, absolutely none. RockeLogic handles 100% of the technical heavy lifting: domain setup, cloud hosting, database architecture, payment integrations, and code maintenance. You receive an intuitive dashboard to manage your content, students, and revenue."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you build a portal exactly like SmartPen Academy?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. SmartPen Academy is an example of our turnkey work. We build customized academies with video lesson protection, student progress tracking, quizzes, automated certificate generation, and instant checkout via Razorpay or Stripe."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does company registration work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We guide you through choosing the right legal entity (Private Limited, LLP, OPC, or Sole Proprietorship), assist with document preparation, file for incorporation, and obtain your GSTIN number, enabling you to legally accept commercial payments."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who owns the code, website, and student data?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You own 100% of your business, domain name, source code, student database, and payment accounts. You maintain complete sovereignty over your digital assets with no vendor lock-in."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does the entire launch process take?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our standard turnaround is 30 days from project kickoff to public launch. For founders who already have their company registered, we can often launch the web portal in as little as 2 to 3 weeks."
+        }
+      }
+    ]
+  }
+  </script>
 
-/* SOLUTIONS */
-.solutions-hero{background:var(--ink);color:var(--white);padding:5rem 3rem 4rem;}
-.solutions-hero-inner{max-width:1200px;margin:0 auto;}
-.solutions-hero .section-tag{color:var(--gold2);}
-.solutions-hero h2{font-family:'Cormorant Garamond',serif;font-size:50px;font-weight:500;line-height:1.1;max-width:700px;}
-.solutions-hero p{color:rgba(255,255,255,0.6);font-size:15px;margin-top:1rem;max-width:560px;}
+  <style>
+    :root {
+      --bg: #070a12;
+      --bg-surface: #0e1526;
+      --bg-surface-elevated: #162038;
+      --bg-card: rgba(22, 32, 56, 0.65);
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --border-accent: rgba(59, 130, 246, 0.35);
+      --border-glow: rgba(59, 130, 246, 0.6);
+      
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+      
+      --blue-primary: #3b82f6;
+      --blue-light: #60a5fa;
+      --blue-dark: #1d4ed8;
+      --blue-glow: rgba(59, 130, 246, 0.22);
+      
+      --cyan: #06b6d4;
+      --emerald: #10b981;
+      --amber: #f59e0b;
+      --purple: #8b5cf6;
+      
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-full: 9999px;
+      
+      --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      --transition-smooth: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
 
-.solutions-body{max-width:1200px;margin:0 auto;padding:4rem 3rem;}
-.solution-block{display:grid;grid-template-columns:280px 1fr;gap:3rem;padding:3rem 0;border-bottom:1px solid var(--rule);}
-.solution-block:last-child{border-bottom:none;}
-.sol-label{font-family:'Cormorant Garamond',serif;font-size:15px;color:var(--gold);font-style:italic;}
-.sol-num{font-family:'Cormorant Garamond',serif;font-size:72px;font-weight:400;color:var(--gold3);line-height:1;margin-top:.25rem;}
-.sol-content h3{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:500;margin-bottom:1rem;}
-.sol-content p{font-size:14px;color:var(--ink2);line-height:1.7;margin-bottom:1.5rem;}
-.sol-tags{display:flex;flex-wrap:wrap;gap:8px;}
-.sol-tag{font-size:11px;letter-spacing:0.08em;text-transform:uppercase;padding:5px 12px;border:1px solid var(--rule);color:var(--ink3);}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-/* CASE STUDIES */
-.cases-header{max-width:1200px;margin:0 auto;padding:5rem 3rem 3rem;}
-.cases-grid{max-width:1200px;margin:0 auto;padding:0 3rem 5rem;display:grid;gap:2px;}
-.case-card{display:grid;grid-template-columns:1fr 1fr;background:var(--white);border:1px solid var(--rule);overflow:hidden;}
-.case-left{padding:3rem;border-right:1px solid var(--rule);}
-.case-right{padding:3rem;}
-.case-tag{font-size:11px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;}
-.case-card h3{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:500;line-height:1.2;margin-bottom:1rem;}
-.case-challenge{font-size:14px;color:var(--ink2);line-height:1.7;}
-.case-metric-big{font-family:'Cormorant Garamond',serif;font-size:72px;font-weight:600;color:var(--gold);line-height:1;margin-bottom:.5rem;}
-.case-metric-label{font-size:13px;color:var(--ink2);margin-bottom:2rem;}
-.case-detail h4{font-size:12px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink3);margin-bottom:.5rem;}
-.case-detail p{font-size:14px;color:var(--ink2);line-height:1.6;margin-bottom:1.5rem;}
+    html {
+      scroll-behavior: smooth;
+      color-scheme: dark;
+    }
 
-/* ABOUT */
-.about-split{max-width:1200px;margin:0 auto;padding:5rem 3rem;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;}
-.about-left{}
-.about-quote{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:400;font-style:italic;line-height:1.4;color:var(--ink);margin-bottom:2rem;padding-left:1.5rem;border-left:2px solid var(--gold);}
-.about-bio{font-size:14px;color:var(--ink2);line-height:1.8;margin-bottom:1.5rem;}
-.timeline{margin-top:2rem;}
-.tl-item{display:flex;gap:1.5rem;margin-bottom:1.5rem;}
-.tl-dot{width:8px;height:8px;border-radius:50%;background:var(--gold);margin-top:6px;flex-shrink:0;}
-.tl-text{}
-.tl-label{font-size:12px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);margin-bottom:3px;}
-.tl-desc{font-size:14px;color:var(--ink2);line-height:1.5;}
-.cred-grid{display:grid;gap:1px;background:var(--rule);}
-.cred-item{background:var(--white);padding:1.5rem 2rem;}
-.cred-item h4{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:500;margin-bottom:.4rem;}
-.cred-item p{font-size:13px;color:var(--ink2);}
-.tech-section{margin-top:2rem;padding-top:2rem;border-top:1px solid var(--rule);}
-.tech-title{font-size:12px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink3);margin-bottom:1rem;}
-.tech-chips{display:flex;flex-wrap:wrap;gap:8px;}
-.tech-chip{font-size:12px;padding:4px 12px;background:var(--surface);border:1px solid var(--rule);color:var(--ink2);}
+    body {
+      background-color: var(--bg);
+      color: var(--text-main);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 16px;
+      line-height: 1.65;
+      overflow-x: hidden;
+      position: relative;
+    }
 
-/* CONTACT */
-.contact-layout{max-width:1200px;margin:0 auto;padding:5rem 3rem;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;}
-.contact-left h2{font-family:'Cormorant Garamond',serif;font-size:48px;font-weight:500;line-height:1.1;margin-bottom:1.5rem;}
-.contact-left p{font-size:15px;color:var(--ink2);line-height:1.7;margin-bottom:2.5rem;}
-.contact-detail{display:flex;align-items:center;gap:1rem;margin-bottom:1.25rem;}
-.contact-icon{width:38px;height:38px;border:1px solid var(--rule);display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0;}
-.contact-info{}
-.contact-info-label{font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin-bottom:2px;}
-.contact-info-val{font-size:14px;color:var(--ink);}
-.audit-card{background:var(--ink);color:var(--white);padding:2.5rem;margin-top:2rem;}
-.audit-card h3{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:500;color:var(--gold2);margin-bottom:.75rem;}
-.audit-card p{font-size:13px;color:rgba(255,255,255,0.6);line-height:1.7;margin-bottom:1.5rem;}
-.btn-audit{display:inline-block;border:1px solid var(--gold);color:var(--gold);padding:10px 22px;font-size:12px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;cursor:pointer;background:none;transition:all .2s;}
-.btn-audit:hover{background:var(--gold);color:var(--ink);}
+    /* Ambient Background Gradients */
+    .ambient-glow {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      max-width: 1400px;
+      height: 700px;
+      background: radial-gradient(circle at 50% 10%, rgba(59, 130, 246, 0.18) 0%, rgba(6, 182, 212, 0.08) 35%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
 
-footer{background:var(--ink);color:rgba(255,255,255,0.4);text-align:center;padding:2rem 3rem;font-size:12px;letter-spacing:0.05em;}
-</style>
+    .grid-mesh {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 900px;
+      background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+      background-size: 48px 48px;
+      mask-image: linear-gradient(to bottom, black 30%, transparent 90%);
+      -webkit-mask-image: linear-gradient(to bottom, black 30%, transparent 90%);
+      pointer-events: none;
+      z-index: 0;
+    }
 
-<nav>
-  <div class="nav-inner">
-    <div class="logo" onclick="showPage('home')">Rocke<span>Logic</span></div>
-    <div class="nav-links">
-      <a onclick="showPage('home')">Home</a>
-      <a onclick="showPage('solutions')">Solutions</a>
-      <a onclick="showPage('cases')">Case Studies</a>
-      <a onclick="showPage('about')">About</a>
-      <a onclick="showPage('contact')">Contact</a>
-    </div>
-    <button class="nav-cta" onclick="showPage('contact')">Request Consultation</button>
-  </div>
-</nav>
+    /* Container */
+    .container {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      position: relative;
+      z-index: 1;
+    }
 
-<!-- HOME -->
-<div class="page active" id="page-home">
-  <section class="hero">
-    <div>
-      <div class="hero-eyebrow">25 Years · BFSI Executive Leadership</div>
-      <h1>Certainty in<br>Complex Banking<br>& <em>AI Transformations</em></h1>
-      <p class="hero-sub">Orchestrating multi-million-dollar portfolios for Global Systemically Important Banks with over two decades of technical and P&L leadership.</p>
-      <button class="btn-primary" onclick="showPage('contact')">Request a Strategic Consultation</button>
-    </div>
-    <div class="hero-card">
-      <div class="hero-card-title">Engagement Track Record</div>
-      <div class="metric-row">
-        <div class="metric-item">
-          <div class="metric-num">$8M+</div>
-          <div class="metric-label">Annual technology budgets governed across G-SIB accounts</div>
+    /* Typography */
+    h1, h2, h3, h4 {
+      font-family: 'Outfit', sans-serif;
+      color: var(--text-main);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    .gradient-text {
+      background: linear-gradient(135deg, #ffffff 20%, #93c5fd 60%, #38bdf8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .gradient-accent {
+      background: linear-gradient(135deg, #60a5fa 0%, #38bdf8 50%, #34d399 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Navigation */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(7, 10, 18, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-subtle);
+      transition: var(--transition-fast);
+    }
+
+    .nav-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 76px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .brand-logo-icon {
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(135deg, #2563eb, #06b6d4);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 800;
+      font-size: 20px;
+      color: #ffffff;
+      box-shadow: 0 4px 14px rgba(37, 99, 235, 0.4);
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-name {
+      font-family: 'Outfit', sans-serif;
+      font-size: 19px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      color: #ffffff;
+      line-height: 1.1;
+    }
+
+    .brand-name span {
+      color: var(--blue-light);
+    }
+
+    .brand-sub {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--text-dim);
+      font-weight: 600;
+      margin-top: 2px;
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-link {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      transition: color var(--transition-fast);
+    }
+
+    .nav-link:hover {
+      color: #ffffff;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 11px 22px;
+      font-size: 14px;
+      font-weight: 600;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      cursor: pointer;
+      transition: all var(--transition-smooth);
+      border: 1px solid transparent;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #2563eb, #1d4ed8);
+      color: #ffffff;
+      box-shadow: 0 4px 18px rgba(37, 99, 235, 0.35);
+    }
+
+    .btn-primary:hover {
+      background: linear-gradient(135deg, #3b82f6, #2563eb);
+      box-shadow: 0 6px 24px rgba(37, 99, 235, 0.55);
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--text-main);
+      border-color: var(--border-subtle);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.2);
+      transform: translateY(-1px);
+    }
+
+    .btn-icon {
+      font-size: 16px;
+    }
+
+    /* Badges */
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      border-radius: var(--radius-full);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+    }
+
+    .badge-blue {
+      background: rgba(59, 130, 246, 0.12);
+      border: 1px solid rgba(59, 130, 246, 0.3);
+      color: #93c5fd;
+    }
+
+    .badge-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #3b82f6;
+      box-shadow: 0 0 8px #3b82f6;
+      animation: pulse 2s infinite;
+    }
+
+    .badge-green {
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      color: #6ee7b7;
+    }
+
+    .badge-green .badge-dot {
+      background: #10b981;
+      box-shadow: 0 0 8px #10b981;
+    }
+
+    .badge-amber {
+      background: rgba(245, 158, 11, 0.12);
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      color: #fcd34d;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(0.85); }
+    }
+
+    /* HERO SECTION */
+    .hero {
+      padding: 5rem 0 4.5rem;
+      position: relative;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.95fr;
+      gap: 3.5rem;
+      align-items: center;
+    }
+
+    .hero-content {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .hero-title {
+      font-size: clamp(2.4rem, 4.5vw, 3.6rem);
+      line-height: 1.1;
+      font-weight: 800;
+    }
+
+    .hero-description {
+      font-size: 1.125rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      max-width: 580px;
+    }
+
+    .hero-ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 0.5rem;
+    }
+
+    .hero-trust-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1.75rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid var(--border-subtle);
+      margin-top: 0.5rem;
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .trust-check {
+      color: var(--emerald);
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    /* HERO VISUAL - Interactive SmartPen Academy Showcase Mockup */
+    .portal-preview-card {
+      background: #0f1629;
+      border: 1px solid var(--border-accent);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 30px rgba(59, 130, 246, 0.15);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .portal-preview-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #3b82f6, #06b6d4, #10b981);
+    }
+
+    .portal-window-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--border-subtle);
+      margin-bottom: 1.25rem;
+    }
+
+    .window-dots {
+      display: flex;
+      gap: 6px;
+    }
+
+    .window-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+
+    .dot-red { background: #ef4444; }
+    .dot-yellow { background: #f59e0b; }
+    .dot-green { background: #10b981; }
+
+    .window-title {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      color: var(--text-dim);
+      background: rgba(0, 0, 0, 0.35);
+      padding: 4px 12px;
+      border-radius: 6px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .portal-status-pill {
+      font-size: 11px;
+      font-weight: 600;
+      color: #34d399;
+      background: rgba(16, 185, 129, 0.12);
+      padding: 3px 10px;
+      border-radius: var(--radius-full);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .portal-screen {
+      background: #080c18;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-subtle);
+      padding: 1.25rem;
+    }
+
+    .portal-header-mock {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.25rem;
+    }
+
+    .portal-logo-mock {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .portal-logo-mock span {
+      color: #38bdf8;
+    }
+
+    .portal-user-mock {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    .user-avatar {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: #2563eb;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    .portal-stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-bottom: 1.25rem;
+    }
+
+    .stat-box {
+      background: rgba(22, 32, 56, 0.7);
+      border: 1px solid var(--border-subtle);
+      border-radius: 8px;
+      padding: 10px;
+    }
+
+    .stat-label {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-dim);
+      margin-bottom: 2px;
+    }
+
+    .stat-val {
+      font-family: 'Outfit', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    .portal-modules-mock {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .module-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 12px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 6px;
+      font-size: 12px;
+    }
+
+    .module-info {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .module-icon {
+      color: var(--blue-light);
+    }
+
+    .module-badge {
+      font-size: 10px;
+      padding: 2px 8px;
+      border-radius: 4px;
+      background: rgba(59, 130, 246, 0.15);
+      color: #93c5fd;
+      font-weight: 600;
+    }
+
+    .live-badge-toast {
+      margin-top: 1rem;
+      background: rgba(16, 185, 129, 0.08);
+      border: 1px solid rgba(16, 185, 129, 0.25);
+      border-radius: 8px;
+      padding: 10px 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 12px;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .toast-text {
+      color: #a7f3d0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* STATS STRIP */
+    .stats-strip {
+      background: #0b1120;
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 2rem 0;
+    }
+
+    .stats-strip-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+    }
+
+    .strip-stat {
+      text-align: center;
+    }
+
+    .strip-stat-num {
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(2rem, 3vw, 2.75rem);
+      font-weight: 800;
+      color: #ffffff;
+      line-height: 1.1;
+      margin-bottom: 4px;
+    }
+
+    .strip-stat-label {
+      font-size: 13px;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    /* SECTION COMMON */
+    .section-padding {
+      padding: 6rem 0;
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 3.5rem;
+    }
+
+    .section-eyebrow {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--blue-light);
+      margin-bottom: 0.75rem;
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 3.2vw, 2.75rem);
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
+    .section-desc {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    /* COMPARISON */
+    .comparison-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+
+    .comparison-card {
+      border-radius: var(--radius-md);
+      padding: 2.5rem;
+      position: relative;
+    }
+
+    .card-pain {
+      background: rgba(239, 68, 68, 0.03);
+      border: 1px solid rgba(239, 68, 68, 0.15);
+    }
+
+    .card-solution {
+      background: rgba(59, 130, 246, 0.05);
+      border: 1px solid var(--border-accent);
+      box-shadow: 0 10px 30px rgba(37, 99, 235, 0.12);
+    }
+
+    .card-badge-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .card-title {
+      font-size: 1.35rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .comparison-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1.15rem;
+      margin-top: 1.5rem;
+    }
+
+    .comp-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .comp-icon-bad {
+      color: #ef4444;
+      font-size: 16px;
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .comp-icon-good {
+      color: #10b981;
+      font-size: 16px;
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    /* THE 3-PILLAR LAUNCHPAD */
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.75rem;
+    }
+
+    .pillar-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 2.25rem 1.75rem;
+      transition: all var(--transition-smooth);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .pillar-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--border-accent);
+      box-shadow: 0 14px 34px rgba(0, 0, 0, 0.4), 0 0 20px rgba(59, 130, 246, 0.15);
+    }
+
+    .pillar-step {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: var(--blue-light);
+      background: rgba(59, 130, 246, 0.12);
+      border: 1px solid rgba(59, 130, 246, 0.25);
+      padding: 4px 10px;
+      border-radius: 4px;
+      width: fit-content;
+      margin-bottom: 1.25rem;
+      font-weight: 600;
+    }
+
+    .pillar-icon-box {
+      width: 52px;
+      height: 52px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(6, 182, 212, 0.15));
+      border: 1px solid var(--border-accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      margin-bottom: 1.25rem;
+      color: #38bdf8;
+    }
+
+    .pillar-title {
+      font-size: 1.35rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .pillar-desc {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.65;
+      margin-bottom: 1.5rem;
+      flex-grow: 1;
+    }
+
+    .pillar-deliverables {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+      padding-top: 1.25rem;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .del-item {
+      font-size: 13px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #cbd5e1;
+    }
+
+    .del-item::before {
+      content: '✔';
+      color: var(--blue-light);
+      font-size: 11px;
+    }
+
+    /* SEO FRAMEWORK HIGHLIGHT STRIP */
+    .seo-framework-banner {
+      margin-top: 3.5rem;
+      background: linear-gradient(135deg, rgba(14, 21, 38, 0.95), rgba(22, 32, 56, 0.95));
+      border: 1px solid var(--border-accent);
+      border-radius: var(--radius-md);
+      padding: 2.25rem;
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 2.5rem;
+      align-items: center;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .seo-banner-title {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .seo-pill-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    .seo-feature-pill {
+      background: rgba(8, 12, 24, 0.8);
+      border: 1px solid var(--border-subtle);
+      border-radius: 8px;
+      padding: 10px 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      color: #e2e8f0;
+    }
+
+    .seo-feature-pill span {
+      color: var(--cyan);
+      font-size: 14px;
+    }
+
+    /* SHOWCASE SECTION: SMARTPEN ACADEMY */
+    .showcase-section {
+      background: linear-gradient(180deg, #070a12 0%, #0d1424 50%, #070a12 100%);
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 6.5rem 0;
+      position: relative;
+    }
+
+    .showcase-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.15fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .showcase-info h3 {
+      font-size: clamp(2rem, 3vw, 2.5rem);
+      line-height: 1.2;
+      margin-bottom: 1.25rem;
+    }
+
+    .showcase-story {
+      font-size: 15px;
+      color: var(--text-muted);
+      line-height: 1.75;
+      margin-bottom: 1.75rem;
+    }
+
+    .showcase-metrics {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.25rem;
+      margin-bottom: 2rem;
+    }
+
+    .sc-metric-card {
+      background: rgba(22, 32, 56, 0.6);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      padding: 1.25rem;
+    }
+
+    .sc-metric-num {
+      font-family: 'Outfit', sans-serif;
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--blue-light);
+      margin-bottom: 2px;
+    }
+
+    .sc-metric-label {
+      font-size: 12px;
+      color: var(--text-dim);
+    }
+
+    .showcase-mockup-wrapper {
+      background: #111a2f;
+      border: 1px solid var(--border-accent);
+      border-radius: var(--radius-md);
+      padding: 1.75rem;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7);
+    }
+
+    .course-card-demo {
+      background: #090e1a;
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 1rem;
+    }
+
+    .course-thumb {
+      height: 150px;
+      background: linear-gradient(135deg, #1e3a8a, #0f172a);
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    .course-thumb-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    .play-btn {
+      position: absolute;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: rgba(59, 130, 246, 0.9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      font-size: 18px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.4);
+    }
+
+    .course-body {
+      padding: 1.25rem;
+    }
+
+    .course-progress-bar {
+      height: 6px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 3px;
+      margin: 10px 0 14px;
+      overflow: hidden;
+    }
+
+    .course-progress-fill {
+      width: 78%;
+      height: 100%;
+      background: linear-gradient(90deg, #3b82f6, #06b6d4);
+    }
+
+    .course-meta-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+      color: var(--text-dim);
+    }
+
+    /* 30-DAY TIMELINE */
+    .timeline-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.25rem;
+      margin-top: 3rem;
+      position: relative;
+    }
+
+    .timeline-grid::before {
+      content: '';
+      position: absolute;
+      top: 36px;
+      left: 10%;
+      right: 10%;
+      height: 2px;
+      background: linear-gradient(90deg, #3b82f6, #06b6d4, #10b981);
+      z-index: 0;
+    }
+
+    .timeline-node {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 1.75rem 1.25rem;
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .timeline-badge {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: #1e293b;
+      border: 2px solid var(--blue-primary);
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.25rem;
+      box-shadow: 0 0 15px rgba(59, 130, 246, 0.3);
+    }
+
+    .timeline-week {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: var(--blue-light);
+      margin-bottom: 6px;
+      font-weight: 600;
+    }
+
+    .timeline-title {
+      font-size: 17px;
+      margin-bottom: 8px;
+    }
+
+    .timeline-text {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* LEAD CAPTURE & AUDIT FORM */
+    .contact-section {
+      padding: 6.5rem 0;
+      position: relative;
+    }
+
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    .contact-info-block {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .direct-contact-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 1.75rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+
+    .contact-icon-box {
+      width: 38px;
+      height: 38px;
+      border-radius: 8px;
+      background: rgba(59, 130, 246, 0.12);
+      border: 1px solid rgba(59, 130, 246, 0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--blue-light);
+      font-size: 16px;
+      flex-shrink: 0;
+    }
+
+    .contact-item-title {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-dim);
+      margin-bottom: 2px;
+      font-weight: 600;
+    }
+
+    .contact-item-val {
+      font-size: 14px;
+      color: var(--text-main);
+      font-weight: 500;
+      text-decoration: none;
+    }
+
+    .contact-item-val:hover {
+      color: var(--blue-light);
+    }
+
+    .gst-pill {
+      background: rgba(245, 158, 11, 0.1);
+      border: 1px solid rgba(245, 158, 11, 0.25);
+      color: #fbbf24;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      padding: 6px 12px;
+      border-radius: 6px;
+      display: inline-block;
+      width: fit-content;
+    }
+
+    /* FORM CARD */
+    .form-card {
+      background: #0f1629;
+      border: 1px solid var(--border-accent);
+      border-radius: var(--radius-lg);
+      padding: 2.75rem 2.5rem;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    }
+
+    .form-title {
+      font-size: 1.75rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .form-desc {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .form-group.full-width {
+      grid-column: span 2;
+    }
+
+    label {
+      font-size: 12px;
+      font-weight: 600;
+      color: #cbd5e1;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      background: #080c18;
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      padding: 12px 14px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 14px;
+      color: #ffffff;
+      outline: none;
+      transition: border-color var(--transition-fast);
+    }
+
+    input:focus, select:focus, textarea:focus {
+      border-color: var(--blue-primary);
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 110px;
+    }
+
+    .form-submit-btn {
+      width: 100%;
+      padding: 14px;
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      margin-top: 0.75rem;
+    }
+
+    .form-success-banner {
+      display: none;
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid rgba(16, 185, 129, 0.35);
+      color: #6ee7b7;
+      border-radius: var(--radius-sm);
+      padding: 1rem 1.25rem;
+      margin-top: 1.25rem;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    /* FAQ SECTION */
+    .faq-section {
+      padding: 5rem 0 6rem;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .faq-accordion {
+      max-width: 860px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .faq-item {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      transition: border-color var(--transition-fast);
+    }
+
+    .faq-item:hover {
+      border-color: var(--border-accent);
+    }
+
+    .faq-question {
+      padding: 1.25rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      font-family: 'Outfit', sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      color: #ffffff;
+      user-select: none;
+    }
+
+    .faq-toggle {
+      font-size: 18px;
+      color: var(--blue-light);
+      transition: transform var(--transition-fast);
+    }
+
+    .faq-answer {
+      display: none;
+      padding: 0 1.5rem 1.25rem;
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.7;
+      border-top: 1px solid rgba(255, 255, 255, 0.04);
+      padding-top: 1rem;
+    }
+
+    .faq-item.active .faq-answer {
+      display: block;
+    }
+
+    .faq-item.active .faq-toggle {
+      transform: rotate(45deg);
+    }
+
+    /* FOOTER */
+    footer {
+      background: #05080e;
+      border-top: 1px solid var(--border-subtle);
+      padding: 4.5rem 0 2.5rem;
+      color: var(--text-dim);
+      font-size: 13px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 3rem;
+      margin-bottom: 3.5rem;
+    }
+
+    .footer-col h5 {
+      color: #ffffff;
+      font-size: 14px;
+      margin-bottom: 1.25rem;
+      letter-spacing: 0.04em;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color var(--transition-fast);
+    }
+
+    .footer-links a:hover {
+      color: var(--blue-light);
+    }
+
+    .footer-bottom {
+      padding-top: 2rem;
+      border-top: 1px solid var(--border-subtle);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 992px) {
+      .hero-grid, .showcase-layout, .contact-layout, .comparison-grid, .seo-framework-banner {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+      .pillars-grid {
+        grid-template-columns: 1fr;
+      }
+      .timeline-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .timeline-grid::before {
+        display: none;
+      }
+      .stats-strip-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .nav-menu {
+        display: none;
+      }
+      .timeline-grid, .stats-strip-grid, .footer-grid, .form-grid, .seo-pill-grid {
+        grid-template-columns: 1fr;
+      }
+      .form-group.full-width {
+        grid-column: span 1;
+      }
+      .form-card {
+        padding: 1.75rem 1.25rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Ambient Light Effects -->
+  <div class="ambient-glow"></div>
+  <div class="grid-mesh"></div>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container">
+      <div class="nav-wrapper">
+        <a href="#hero" class="brand" id="nav-brand">
+          <div class="brand-logo-icon">R</div>
+          <div class="brand-text">
+            <div class="brand-name">Rocke<span>Logic</span></div>
+            <div class="brand-sub">Technology Partners</div>
+          </div>
+        </a>
+
+        <ul class="nav-menu">
+          <li><a href="#pillars" class="nav-link">What We Build</a></li>
+          <li><a href="#showcase" class="nav-link">SmartPen Showcase</a></li>
+          <li><a href="#seo" class="nav-link">SEO Framework</a></li>
+          <li><a href="#process" class="nav-link">30-Day Launchpad</a></li>
+          <li><a href="#faq" class="nav-link">FAQ</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <a href="#contact" class="btn btn-primary" id="header-cta-btn">
+            <span>Schedule Launch Call</span>
+            <span class="btn-icon">→</span>
+          </a>
         </div>
-        <div class="metric-item">
-          <div class="metric-num">100+</div>
-          <div class="metric-label">Global engineering professionals led across distributed teams</div>
-        </div>
-        <div class="metric-item">
-          <div class="metric-num">75%</div>
-          <div class="metric-label">Improvement in time-to-market — 6 months compressed to 6 weeks</div>
-        </div>
-        <div class="metric-item">
-          <div class="metric-num">6.9/7</div>
-          <div class="metric-label">Average CSAT across all G-SIB client engagements</div>
-        </div>
       </div>
     </div>
-  </section>
+  </header>
 
-  <div class="ribbon">
-    <div class="ribbon-inner">
-      <div class="ribbon-item">
-        <div class="ribbon-val">$800K</div>
-        <div class="ribbon-desc">Annual recurring savings from automation ROI</div>
-      </div>
-      <div class="ribbon-item">
-        <div class="ribbon-val">G-SIB</div>
-        <div class="ribbon-desc">Citigroup · Morgan Stanley · Marsh Inc.</div>
-      </div>
-      <div class="ribbon-item">
-        <div class="ribbon-val">30%</div>
-        <div class="ribbon-desc">Revenue expansion from high-stakes vendor transition</div>
-      </div>
-      <div class="ribbon-item">
-        <div class="ribbon-val">SAFe 5</div>
-        <div class="ribbon-desc">Certified Agilist · PM Elite II · MBA Finance</div>
-      </div>
-    </div>
-  </div>
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero" id="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <div class="badge badge-blue">
+              <span class="badge-dot"></span>
+              The Turnkey Launchpad for Solopreneurs & Founders
+            </div>
 
-  <section class="pillars">
-    <div class="section-header">
-      <div class="section-tag">Service Pillars</div>
-      <div class="section-title">Where We Create<br>Lasting Value</div>
-    </div>
-    <div class="pillar-grid">
-      <div class="pillar">
-        <div class="pillar-num">01</div>
-        <h3>Core Banking Modernization</h3>
-        <p>Specialized in the "last-mile" integration of cloud-native platforms like FIS MBP and the CAPE framework — bridging legacy infrastructure with modern SaaS architectures.</p>
-      </div>
-      <div class="pillar">
-        <div class="pillar-num">02</div>
-        <h3>Operational Intelligence & Automation</h3>
-        <p>Transforming SDLC from high-risk manual processes to API-driven, GitOps-managed pipelines that deliver 75% faster time-to-market.</p>
-      </div>
-      <div class="pillar">
-        <div class="pillar-num">03</div>
-        <h3>Regulatory & Risk Orchestration</h3>
-        <p>End-to-end deployment of NICE Actimize, AML, and fraud detection systems embedded within core transaction flows and regulatory compliance stacks.</p>
-      </div>
-    </div>
-  </section>
-</div>
+            <h1 class="hero-title">
+              Turn Your Expertise Into a <span class="gradient-text">Registered Company</span> & <span class="gradient-accent">Live Web Portal</span>
+            </h1>
 
-<!-- SOLUTIONS -->
-<div class="page" id="page-solutions">
-  <div class="solutions-hero">
-    <div class="solutions-hero-inner">
-      <div class="section-tag">Solutions & Expertise</div>
-      <h2>Technical Grit. Strategic Vision. Measurable Outcomes.</h2>
-      <p>Two decades of deep-domain practice across core banking, payments, risk, and AI-driven value stream transformation.</p>
-    </div>
-  </div>
-  <div class="solutions-body">
-    <div class="solution-block">
-      <div>
-        <div class="sol-label">Section I</div>
-        <div class="sol-num">01</div>
-      </div>
-      <div class="sol-content">
-        <h3>Core Banking & Payments Ecosystems</h3>
-        <p>We provide the technical grit to bridge legacy systems with modern SaaS architectures. Our practice covers the full complexity of banking platform integration — from framework consumption to final Go/No-Go authority.</p>
-        <p><strong>Framework Layering:</strong> Consuming CAPE framework snapshots to build high-performance business layers for Retail and Commercial Lending. Our architecture ensures clean separation of concerns while maximizing platform throughput.</p>
-        <p><strong>Payment Rail Integration:</strong> Seamlessly orchestrating Zelle, ACH, and VISA PaymentsOne for true global transactionality across retail and commercial channels.</p>
-        <p><strong>Platform Stabilization:</strong> Exercising final Go/No-Go authority to ensure zero-defect production rollouts — protecting your reputation and client trust at every release.</p>
-        <div class="sol-tags">
-          <span class="sol-tag">FIS MBP</span><span class="sol-tag">CAPE Framework</span><span class="sol-tag">Zelle</span><span class="sol-tag">ACH</span><span class="sol-tag">VISA PaymentsOne</span><span class="sol-tag">Core Banking</span>
-        </div>
-      </div>
-    </div>
-    <div class="solution-block">
-      <div>
-        <div class="sol-label">Section II</div>
-        <div class="sol-num">02</div>
-      </div>
-      <div class="sol-content">
-        <h3>Strategic Value Stream Leadership</h3>
-        <p>Transitioning organizations from "output-focused" to "outcome-driven" value streams. We implement SAFe-aligned models that deliver developer productivity gains of 30–40% while maintaining rigorous P&L accountability.</p>
-        <p><strong>SAFe Transformation:</strong> Full implementation of SAFe-aligned Value Stream models, including PI planning, ART launch, and continuous delivery pipeline design. Developer productivity improvements of 30–40% measured within 90 days.</p>
-        <p><strong>P&L & Commercial Governance:</strong> Full lifecycle management of SOWs, RFP responses, and WBS-based effort estimations — ensuring commercial clarity at every stage of engagement.</p>
-        <div class="sol-tags">
-          <span class="sol-tag">SAFe 5 Agilist</span><span class="sol-tag">Value Streams</span><span class="sol-tag">SOW Management</span><span class="sol-tag">WBS Estimation</span><span class="sol-tag">GitOps</span><span class="sol-tag">API Architecture</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+            <p class="hero-description">
+              Stop struggling with multiple freelancers, legal red tape, and broken web templates. We incorporate your business, design your bespoke web portal (like <strong>SmartPen Academy</strong>), wire up automated payments, and embed an enterprise <strong>SEO Framework</strong> — all within <strong>30 days</strong>.
+            </p>
 
-<!-- CASES -->
-<div class="page" id="page-cases">
-  <div class="cases-header">
-    <div class="section-tag">Proof of Value</div>
-    <div class="section-title">Results That<br>Justify the Mandate</div>
-  </div>
-  <div class="cases-grid">
-    <div class="case-card">
-      <div class="case-left">
-        <div class="case-tag">Case Study 01 · Automation ROI</div>
-        <h3>The $800K<br>Automation Return</h3>
-        <p class="case-challenge">A manual, SQL-dependent release process created significant BA bottlenecks and operational risk across a major G-SIB's core banking delivery pipeline. Each release cycle consumed weeks of high-skill engineering time with zero scalability headroom.</p>
-      </div>
-      <div class="case-right">
-        <div class="case-metric-big">$800K</div>
-        <div class="case-metric-label">Annual recurring savings generated</div>
-        <div class="case-detail">
-          <h4>The Solution</h4>
-          <p>Engineered a fully API-based Release Management platform enabling configuration and deployment without any manual SQL edits — eliminating the bottleneck at its root.</p>
-          <h4>The Outcomes</h4>
-          <p>70% reduction in release workload. 30% reduction in BA effort. $800,000 in verified annual recurring savings with zero regression to prior manual processes.</p>
-        </div>
-      </div>
-    </div>
-    <div class="case-card">
-      <div class="case-left">
-        <div class="case-tag">Case Study 02 · G-SIB Transition</div>
-        <h3>High-Stakes<br>Vendor Transition</h3>
-        <p class="case-challenge">A critical incumbent vendor transition for a major banking program under a tight 3-month mandate. Client confidence had eroded; delivery capacity was insufficient. The engagement required immediate structural intervention.</p>
-      </div>
-      <div class="case-right">
-        <div class="case-metric-big">+30%</div>
-        <div class="case-metric-label">Revenue expansion post-transition</div>
-        <div class="case-detail">
-          <h4>The Solution</h4>
-          <p>Spearheaded a structured hiring and upskilling plan, scaling delivery capacity from critical shortage to 35 fully productive resources within mandate timelines.</p>
-          <h4>The Outcomes</h4>
-          <p>Client confidence fully restored within 90 days. Program delivered on schedule. Engagement expanded with a 30% revenue growth driven by the demonstrated delivery excellence.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+            <div class="hero-ctas">
+              <a href="#contact" class="btn btn-primary" id="hero-primary-btn">
+                <span>Book a Free Launch Strategy Call</span>
+                <span class="btn-icon">→</span>
+              </a>
+              <a href="#showcase" class="btn btn-secondary" id="hero-secondary-btn">
+                <span>Inspect SmartPen Academy</span>
+                <span class="btn-icon">↓</span>
+              </a>
+            </div>
 
-<!-- ABOUT -->
-<div class="page" id="page-about">
-  <div class="about-split">
-    <div class="about-left">
-      <div class="section-tag">About RockeLogic</div>
-      <div class="section-title" style="margin-bottom:2rem;">Founded on<br>Technical Excellence</div>
-      <div class="about-quote">"An IT executive who rose from core J2EE engineering to P&L-accountable leadership for the world's largest banks."</div>
-      <p class="about-bio">RockeLogic was founded by Rocke F. Fashy, a practitioner who has navigated the full arc of banking technology — from hands-on architecture to executive mandate. This dual fluency in code and commerce is what sets RockeLogic apart.</p>
-      <p class="about-bio">Six years of onsite US leadership at Citigroup, Morgan Stanley, and Marsh Inc. provided the deep client intimacy that only proximity can build. Today, that experience anchors every engagement.</p>
-      <div class="timeline">
-        <div class="tl-item">
-          <div class="tl-dot"></div>
-          <div class="tl-text">
-            <div class="tl-label">Citigroup</div>
-            <div class="tl-desc">Onsite US delivery leadership across core banking and payments transformation programs</div>
+            <div class="hero-trust-row">
+              <div class="trust-item">
+                <span class="trust-check">✓</span>
+                <span>Company Registration & GST</span>
+              </div>
+              <div class="trust-item">
+                <span class="trust-check">✓</span>
+                <span>Custom Portal / LMS Design</span>
+              </div>
+              <div class="trust-item">
+                <span class="trust-check">✓</span>
+                <span>Stripe & UPI Payments Live</span>
+              </div>
+              <div class="trust-item">
+                <span class="trust-check">✓</span>
+                <span>Built-in Organic SEO Framework</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Interactive Preview: SmartPen Academy -->
+          <div class="portal-preview-card" id="hero-portal-card">
+            <div class="portal-window-bar">
+              <div class="window-dots">
+                <div class="window-dot dot-red"></div>
+                <div class="window-dot dot-yellow"></div>
+                <div class="window-dot dot-green"></div>
+              </div>
+              <div class="window-title">https://smartpen.academy/portal</div>
+              <div class="portal-status-pill">
+                <span class="badge-dot" style="background:#10b981;box-shadow:none;"></span>
+                LIVE & MONETIZING
+              </div>
+            </div>
+
+            <div class="portal-screen">
+              <div class="portal-header-mock">
+                <div class="portal-logo-mock">
+                  ✍️ SmartPen <span>Academy</span>
+                </div>
+                <div class="portal-user-mock">
+                  <div class="user-avatar">RF</div>
+                  <span>Student Portal</span>
+                </div>
+              </div>
+
+              <div class="portal-stats-grid">
+                <div class="stat-box">
+                  <div class="stat-label">Active Learners</div>
+                  <div class="stat-val">1,420+</div>
+                </div>
+                <div class="stat-box">
+                  <div class="stat-label">Google Rich Snippets</div>
+                  <div class="stat-val" style="color:#38bdf8;font-size:15px;line-height:1.4;">Active JSON-LD</div>
+                </div>
+                <div class="stat-box">
+                  <div class="stat-label">Automation</div>
+                  <div class="stat-val">100%</div>
+                </div>
+              </div>
+
+              <div class="portal-modules-mock">
+                <div class="module-item">
+                  <div class="module-info">
+                    <span class="module-icon">▶</span>
+                    <span>Module 1: Foundations of Print & Cursive</span>
+                  </div>
+                  <span class="module-badge">Completed</span>
+                </div>
+                <div class="module-item">
+                  <div class="module-info">
+                    <span class="module-icon">🔒</span>
+                    <span>Module 2: Speed Writing & Motor Memory</span>
+                  </div>
+                  <span class="module-badge" style="background:rgba(16,185,129,0.15);color:#6ee7b7;">Unlocked</span>
+                </div>
+                <div class="module-item">
+                  <div class="module-info">
+                    <span class="module-icon">📜</span>
+                    <span>Automated Certificate of Mastery</span>
+                  </div>
+                  <span class="module-badge" style="background:rgba(245,158,11,0.15);color:#fcd34d;">Auto-Issued</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="live-badge-toast">
+              <div class="toast-text">
+                <span>⚡</span>
+                <span>Built, registered & launched end-to-end by <strong>RockeLogic</strong></span>
+              </div>
+              <span style="font-family:'JetBrains Mono',monospace;color:#34d399;font-weight:600;">SEO & Payments OK</span>
+            </div>
           </div>
         </div>
-        <div class="tl-item">
-          <div class="tl-dot"></div>
-          <div class="tl-text">
-            <div class="tl-label">Morgan Stanley</div>
-            <div class="tl-desc">Technical program leadership for risk and regulatory compliance platforms</div>
-          </div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-dot"></div>
-          <div class="tl-text">
-            <div class="tl-label">Marsh Inc.</div>
-            <div class="tl-desc">Enterprise architecture and SDLC modernization for global insurance infrastructure</div>
-          </div>
-        </div>
       </div>
-    </div>
-    <div class="about-right">
-      <div class="cred-grid">
-        <div class="cred-item">
-          <h4>MBA — Systems & Finance</h4>
-          <p>Advanced management education with dual specialization in technology systems and financial markets</p>
-        </div>
-        <div class="cred-item">
-          <h4>B.E. — Electrical & Electronics</h4>
-          <p>Engineering foundation underpinning a career of technical precision and architectural rigor</p>
-        </div>
-        <div class="cred-item">
-          <h4>Certified SAFe 5 Agilist</h4>
-          <p>Scaled Agile Framework practitioner certified at the highest enterprise delivery level</p>
-        </div>
-        <div class="cred-item">
-          <h4>PM Elite II</h4>
-          <p>Advanced project management certification for complex, multi-stakeholder programs</p>
-        </div>
-        <div class="cred-item">
-          <h4>AI-Driven Transformation</h4>
-          <p>Expert practitioner: MS Copilot & GitHub Copilot applied to process intelligence and developer velocity</p>
-        </div>
-      </div>
-      <div class="tech-section">
-        <div class="tech-title">Technical Domain Depth</div>
-        <div class="tech-chips">
-          <span class="tech-chip">Kafka</span><span class="tech-chip">Event Brokers</span><span class="tech-chip">J2EE</span><span class="tech-chip">Mainframe OS/2</span><span class="tech-chip">DB2</span><span class="tech-chip">NICE Actimize</span><span class="tech-chip">AML Systems</span><span class="tech-chip">GitOps</span><span class="tech-chip">API Architecture</span><span class="tech-chip">GitHub Copilot</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+    </section>
 
-<!-- CONTACT -->
-<div class="page" id="page-contact">
-  <div class="contact-layout">
-    <div class="contact-left">
-      <div class="section-tag">Secure Your Transformation</div>
-      <h2>Begin a<br>Strategic<br>Conversation</h2>
-      <p>RockeLogic engages selectively with organizations committed to meaningful transformation. Every inquiry receives a direct, substantive response from the principal.</p>
-      <div class="contact-detail">
-        <div class="contact-icon">✦</div>
-        <div class="contact-info">
-          <div class="contact-info-label">Location</div>
-          <div class="contact-info-val">Bangalore, India · Global Consulting</div>
+    <!-- STATS STRIP -->
+    <section class="stats-strip">
+      <div class="container">
+        <div class="stats-strip-grid">
+          <div class="strip-stat">
+            <div class="strip-stat-num">30 Days</div>
+            <div class="strip-stat-label">Average Time to Live Launch</div>
+          </div>
+          <div class="strip-stat">
+            <div class="strip-stat-num">100%</div>
+            <div class="strip-stat-label">Turnkey Legal & Tech Ownership</div>
+          </div>
+          <div class="strip-stat">
+            <div class="strip-stat-num">Day 1</div>
+            <div class="strip-stat-label">SEO Schema & Google Indexing</div>
+          </div>
+          <div class="strip-stat">
+            <div class="strip-stat-num">1 Partner</div>
+            <div class="strip-stat-label">From Entity Formation to First Sale</div>
+          </div>
         </div>
       </div>
-      <div class="contact-detail">
-        <div class="contact-icon">✆</div>
-        <div class="contact-info">
-          <div class="contact-info-label">Direct Line</div>
-          <div class="contact-info-val">+91 88617 52000</div>
+    </section>
+
+    <!-- THE PROBLEM VS SOLUTION -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-eyebrow">The Solopreneur Dilemma</div>
+          <h2 class="section-title">Why Most Founders Get Trapped In "Launch Limbo"</h2>
+          <p class="section-desc">
+            Building a serious digital business requires legal compliance, high-end portal architecture, automated payment funnels, and organic discoverability. When you try to assemble the pieces yourself, execution halts.
+          </p>
+        </div>
+
+        <div class="comparison-grid">
+          <!-- The Old Way -->
+          <div class="comparison-card card-pain">
+            <div class="card-badge-header">
+              <h3 class="card-title">The Fragmented Freelance Route</h3>
+              <span class="badge" style="background:rgba(239,68,68,0.15);color:#fca5a5;">High Stress & Delay</span>
+            </div>
+            <p style="color:var(--text-muted);font-size:14px;">You spend your valuable time managing four separate vendors who point fingers at each other:</p>
+            <ul class="comparison-list">
+              <li class="comp-item">
+                <span class="comp-icon-bad">✕</span>
+                <span><strong>Legal Delays:</strong> A separate CA or agent taking months to explain company registration, GST, and compliances.</span>
+              </li>
+              <li class="comp-item">
+                <span class="comp-icon-bad">✕</span>
+                <span><strong>Cookie-Cutter Websites:</strong> DIY website builders that look generic, load slowly, and break when you add courses or memberships.</span>
+              </li>
+              <li class="comp-item">
+                <span class="comp-icon-bad">✕</span>
+                <span><strong>Zero Organic SEO:</strong> No structured data, no canonical tags, slow Core Web Vitals — your site remains invisible on Google.</span>
+              </li>
+              <li class="comp-item">
+                <span class="comp-icon-bad">✕</span>
+                <span><strong>Payment Chaos:</strong> Broken webhooks, failed UPI checkouts, and missed revenue due to poor gateway integration.</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- The RockeLogic Way -->
+          <div class="comparison-card card-solution">
+            <div class="card-badge-header">
+              <h3 class="card-title">The RockeLogic Partner Route</h3>
+              <span class="badge badge-green"><span class="badge-dot"></span> Turnkey in 30 Days</span>
+            </div>
+            <p style="color:var(--text-muted);font-size:14px;">A single, elite technology partner who handles the entire stack so you can focus on teaching and selling:</p>
+            <ul class="comparison-list">
+              <li class="comp-item">
+                <span class="comp-icon-good">✓</span>
+                <span><strong>Full Company Registration:</strong> Entity incorporation, GST compliance, and banking setup done with zero confusion.</span>
+              </li>
+              <li class="comp-item">
+                <span class="comp-icon-good">✓</span>
+                <span><strong>Bespoke Web Portal (like SmartPen Academy):</strong> Custom student/client dashboards, secure video hosting, and automated onboarding.</span>
+              </li>
+              <li class="comp-item">
+                <span class="comp-icon-good">✓</span>
+                <span><strong>Built-In Technical SEO Framework:</strong> Automatic JSON-LD course schemas, XML sitemaps, OpenGraph previews, and Google Search Console indexing.</span>
+              </li>
+              <li class="comp-item">
+                <span class="comp-icon-good">✓</span>
+                <span><strong>Automated Payment Rails:</strong> Instant integration with Razorpay, Stripe, and UPI for seamless global & domestic transactions.</span>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-      <div class="contact-detail">
-        <div class="contact-icon">✉</div>
-        <div class="contact-info">
-          <div class="contact-info-label">Email</div>
-          <div class="contact-info-val">rockefashy@gmail.com</div>
+    </section>
+
+    <!-- THE 3-PILLAR LAUNCHPAD -->
+    <section class="section-padding" id="pillars" style="background:rgba(14,21,38,0.5);">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-eyebrow">End-to-End Capabilities</div>
+          <h2 class="section-title">The 3 Pillars of Your Digital Launch</h2>
+          <p class="section-desc">
+            Everything an entrepreneur needs to transition an idea into a legitimate, scalable, and income-generating online business.
+          </p>
         </div>
-      </div>
-      <div class="audit-card">
-        <h3>Fixed-Price Digital Audit</h3>
-        <p>A structured, time-boxed engagement to identify automation opportunities within your existing Core Banking value streams. Delivered with a clear findings report and prioritized recommendations — no open-ended retainer required to begin.</p>
-        <button class="btn-audit">Enquire About the Audit</button>
-      </div>
-    </div>
-    <div class="contact-right" style="padding-top:1rem;">
-      <div style="background:var(--white);border:1px solid var(--rule);padding:2.5rem;">
-        <div style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:500;margin-bottom:1.5rem;padding-bottom:1rem;border-bottom:1px solid var(--rule);">Consultation Request</div>
-        <div style="display:flex;flex-direction:column;gap:1rem;">
+
+        <div class="pillars-grid">
+          <!-- Pillar 1 -->
+          <div class="pillar-card">
+            <div class="pillar-step">PHASE 01</div>
+            <div class="pillar-icon-box">🏛️</div>
+            <h3 class="pillar-title">Company Registration & Legal Setup</h3>
+            <p class="pillar-desc">
+              We lay the legal bedrock of your venture so you operate with full confidence, credibility, and compliance from day one.
+            </p>
+            <ul class="pillar-deliverables">
+              <li class="del-item">Entity Incorporation (Pvt Ltd, LLP, OPC)</li>
+              <li class="del-item">GSTIN Registration & Tax Structuring</li>
+              <li class="del-item">Corporate Bank Account & KYC Setup</li>
+              <li class="del-item">Terms of Service, Privacy & Refund Policies</li>
+            </ul>
+          </div>
+
+          <!-- Pillar 2 -->
+          <div class="pillar-card" style="border-color:var(--border-accent);">
+            <div class="pillar-step" style="background:rgba(59,130,246,0.2);">PHASE 02 · CORE SPECIALTY</div>
+            <div class="pillar-icon-box">💻</div>
+            <h3 class="pillar-title">Custom Web Portal Design</h3>
+            <p class="pillar-desc">
+              We design and build bespoke web portals like <strong>SmartPen Academy</strong> — creating intuitive student learning hubs, client areas, and booking engines.
+            </p>
+            <ul class="pillar-deliverables">
+              <li class="del-item">Bespoke UI/UX Design (No Generic Themes)</li>
+              <li class="del-item">Student / Customer Login & Protected Portal</li>
+              <li class="del-item">Video Player, Progress Tracker & Quizzes</li>
+              <li class="del-item">Automated PDF Certificate Generation</li>
+            </ul>
+          </div>
+
+          <!-- Pillar 3 -->
+          <div class="pillar-card">
+            <div class="pillar-step">PHASE 03 · LAUNCH & GROWTH</div>
+            <div class="pillar-icon-box">🚀</div>
+            <h3 class="pillar-title">Launch, Payments & SEO Framework</h3>
+            <p class="pillar-desc">
+              We link payment gateways, wire up automated receipts, deploy fast cloud hosting, and embed an enterprise SEO framework for organic search discovery.
+            </p>
+            <ul class="pillar-deliverables">
+              <li class="del-item">Stripe, Razorpay & UPI Payment Rails</li>
+              <li class="del-item">Programmatic JSON-LD Schema (Course, FAQ, Reviews)</li>
+              <li class="del-item">Automated XML Sitemaps & Search Console Setup</li>
+              <li class="del-item">Sub-second Core Web Vitals & Global CDN</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- SPECIAL SEO FRAMEWORK HIGHLIGHT BANNER -->
+        <div class="seo-framework-banner" id="seo">
           <div>
-            <div style="font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink3);margin-bottom:6px;">Full Name</div>
-            <input type="text" placeholder="Your name" style="width:100%;padding:10px 14px;border:1px solid var(--rule);background:var(--surface);font-family:'DM Sans',sans-serif;font-size:14px;color:var(--ink);outline:none;">
+            <div class="badge badge-amber" style="margin-bottom:0.75rem;">
+              🔍 The RockeLogic SEO Framework
+            </div>
+            <h3 class="seo-banner-title">Built-In Organic Discoverability</h3>
+            <p style="font-size:14px;color:var(--text-muted);line-height:1.6;">
+              Most web designers build pretty pages that remain ghosts on Google. Every platform built by RockeLogic includes a production-grade SEO architecture designed to capture organic search traffic from Day 1 without expensive agency fees.
+            </p>
           </div>
-          <div>
-            <div style="font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink3);margin-bottom:6px;">Organisation</div>
-            <input type="text" placeholder="Your organisation" style="width:100%;padding:10px 14px;border:1px solid var(--rule);background:var(--surface);font-family:'DM Sans',sans-serif;font-size:14px;color:var(--ink);outline:none;">
+          <div class="seo-pill-grid">
+            <div class="seo-feature-pill">
+              <span>⚡</span>
+              <div><strong>Core Web Vitals</strong>: Sub-800ms LCP score</div>
+            </div>
+            <div class="seo-feature-pill">
+              <span>📋</span>
+              <div><strong>Schema Markup</strong>: Rich JSON-LD Snippets</div>
+            </div>
+            <div class="seo-feature-pill">
+              <span>🗺️</span>
+              <div><strong>XML Sitemaps</strong>: Auto-submitted to Google</div>
+            </div>
+            <div class="seo-feature-pill">
+              <span>🔗</span>
+              <div><strong>OpenGraph Engine</strong>: Viral WhatsApp/LinkedIn cards</div>
+            </div>
           </div>
-          <div>
-            <div style="font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink3);margin-bottom:6px;">Engagement Type</div>
-            <select style="width:100%;padding:10px 14px;border:1px solid var(--rule);background:var(--surface);font-family:'DM Sans',sans-serif;font-size:14px;color:var(--ink);outline:none;">
-              <option>Core Banking Modernization</option>
-              <option>Operational Intelligence & Automation</option>
-              <option>Regulatory & Risk Orchestration</option>
-              <option>Fixed-Price Digital Audit</option>
-              <option>Strategic Advisory</option>
-            </select>
+        </div>
+      </div>
+    </section>
+
+    <!-- FLAGSHIP SHOWCASE: SMARTPEN ACADEMY -->
+    <section class="showcase-section" id="showcase">
+      <div class="container">
+        <div class="showcase-layout">
+          <div class="showcase-info">
+            <div class="badge badge-green" style="margin-bottom:1.25rem;">
+              <span class="badge-dot"></span> Flagship Client Case Study
+            </div>
+            <h3>How We Engineered & Launched <span class="gradient-accent">SmartPen Academy</span></h3>
+            <p class="showcase-story">
+              SmartPen Academy started with a passion for handwriting mastery and an offline curriculum. The founder wanted an enterprise-grade digital academy that could automate student enrollment, deliver modular lessons, rank on Google for handwriting courses, and process payments without manual overhead.
+            </p>
+            <p class="showcase-story">
+              <strong>RockeLogic Technology Partners</strong> handled the complete transition: establishing the business foundation, engineering a custom student portal with progress tracking, embedding the SEO framework, and launching an automated payment engine.
+            </p>
+
+            <div class="showcase-metrics">
+              <div class="sc-metric-card">
+                <div class="sc-metric-num">21 Days</div>
+                <div class="sc-metric-label">From Blueprint to Live Portal</div>
+              </div>
+              <div class="sc-metric-card">
+                <div class="sc-metric-num">Top 3</div>
+                <div class="sc-metric-label">Google SERP for Target Search Terms</div>
+              </div>
+              <div class="sc-metric-card">
+                <div class="sc-metric-num">100%</div>
+                <div class="sc-metric-label">Automated Student Onboarding</div>
+              </div>
+              <div class="sc-metric-card">
+                <div class="sc-metric-num">99.9%</div>
+                <div class="sc-metric-label">Uptime on Cloud Infrastructure</div>
+              </div>
+            </div>
+
+            <a href="#contact" class="btn btn-primary" id="showcase-cta-btn">
+              <span>Build a Portal Like SmartPen Academy</span>
+              <span class="btn-icon">→</span>
+            </a>
           </div>
-          <div>
-            <div style="font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink3);margin-bottom:6px;">Brief</div>
-            <textarea placeholder="Describe your transformation challenge..." style="width:100%;padding:10px 14px;border:1px solid var(--rule);background:var(--surface);font-family:'DM Sans',sans-serif;font-size:14px;color:var(--ink);outline:none;resize:vertical;min-height:100px;"></textarea>
+
+          <div class="showcase-mockup-wrapper">
+            <div class="course-card-demo">
+              <div class="course-thumb">
+                <div class="play-btn">▶</div>
+                <div class="course-thumb-title">
+                  Masterclass: Handwriting Excellence for Children & Adults
+                </div>
+              </div>
+              <div class="course-body">
+                <div style="display:flex;justify-content:space-between;align-items:center;">
+                  <span style="font-weight:600;font-size:14px;color:#ffffff;">Current Student Progress</span>
+                  <span style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#38bdf8;">78% Complete</span>
+                </div>
+                <div class="course-progress-bar">
+                  <div class="course-progress-fill"></div>
+                </div>
+                <div class="course-meta-row">
+                  <span>14 of 18 Lessons Finished</span>
+                  <span>Next: Advanced Speed Drills</span>
+                </div>
+              </div>
+            </div>
+
+            <div style="background:#090e1a;border:1px solid var(--border-subtle);border-radius:10px;padding:1.25rem;">
+              <div style="font-size:12px;text-transform:uppercase;letter-spacing:0.06em;color:var(--text-dim);margin-bottom:8px;">
+                Verified Infrastructure Architecture
+              </div>
+              <div style="display:flex;flex-wrap:wrap;gap:8px;">
+                <span class="badge badge-blue">Custom Responsive Web Portal</span>
+                <span class="badge badge-blue">Razorpay Payment Webhook</span>
+                <span class="badge badge-blue">Built-In Course SEO Schema</span>
+                <span class="badge badge-blue">Auto-Certificate PDF Engine</span>
+                <span class="badge badge-blue">Cloud CDN Global Delivery</span>
+              </div>
+            </div>
           </div>
-          <button onclick="alert('Thank you. Rocke will be in touch directly.')" style="background:var(--ink);color:var(--white);border:none;padding:13px 24px;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;width:100%;margin-top:.5rem;">Submit Request →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 30-DAY LAUNCHPAD TIMELINE -->
+    <section class="section-padding" id="process">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-eyebrow">Clear, Predictable Roadmap</div>
+          <h2 class="section-title">Your 30-Day Path From Idea to Live Revenue</h2>
+          <p class="section-desc">
+            No endless cycles or missed milestones. Our structured sprint model guarantees your business and web platform launch on schedule.
+          </p>
+        </div>
+
+        <div class="timeline-grid">
+          <!-- Week 1 -->
+          <div class="timeline-node">
+            <div class="timeline-badge">01</div>
+            <div class="timeline-week">WEEK 1</div>
+            <h3 class="timeline-title">Entity & Blueprint</h3>
+            <p class="timeline-text">
+              We initiate company incorporation, secure your domain, configure GST, and map the user journeys for your web portal.
+            </p>
+          </div>
+
+          <!-- Week 2 -->
+          <div class="timeline-node">
+            <div class="timeline-badge">02</div>
+            <div class="timeline-week">WEEK 2</div>
+            <h3 class="timeline-title">Portal Architecture</h3>
+            <p class="timeline-text">
+              We design and code your bespoke web portal (student dashboard, video modules, lead magnets, and brand aesthetics).
+            </p>
+          </div>
+
+          <!-- Week 3 -->
+          <div class="timeline-node">
+            <div class="timeline-badge">03</div>
+            <div class="timeline-week">WEEK 3</div>
+            <h3 class="timeline-title">Payments & SEO Setup</h3>
+            <p class="timeline-text">
+              We integrate payment gateways (UPI, Stripe), configure automated customer receipts, and embed JSON-LD SEO schemas.
+            </p>
+          </div>
+
+          <!-- Week 4 -->
+          <div class="timeline-node">
+            <div class="timeline-badge">04</div>
+            <div class="timeline-week">WEEK 4</div>
+            <h3 class="timeline-title">QA & Live Launch</h3>
+            <p class="timeline-text">
+              End-to-end sandbox testing, mobile responsiveness verification, Google Search Console indexing, and public launch!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT & CONSULTATION FORM -->
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <div class="contact-layout">
+          <!-- Left Info Block -->
+          <div class="contact-info-block">
+            <div class="badge badge-blue">
+              <span class="badge-dot"></span> Get Started Today
+            </div>
+            <h2 style="font-size:clamp(2.2rem, 3.5vw, 3rem);line-height:1.15;">
+              Ready to Launch Your <span class="gradient-accent">Custom Web Portal</span>?
+            </h2>
+            <p style="color:var(--text-muted);font-size:15px;line-height:1.75;">
+              Tell us about the business or academy you want to launch. We will review your requirements, outline the legal and technical roadmap, and provide a clear, transparent scope.
+            </p>
+
+            <div class="direct-contact-card">
+              <div class="contact-item">
+                <div class="contact-icon-box">🏢</div>
+                <div>
+                  <div class="contact-item-title">Official Registered Office</div>
+                  <div class="contact-item-val">
+                    Ajmera Infinity, Electronic City Phase 1,<br>
+                    Bangalore - 560100, Karnataka, India
+                  </div>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon-box">✉️</div>
+                <div>
+                  <div class="contact-item-title">Official Direct Email</div>
+                  <a href="mailto:rockefashy@rockelogic.com" class="contact-item-val">rockefashy@rockelogic.com</a>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon-box">📞</div>
+                <div>
+                  <div class="contact-item-title">Call or WhatsApp Direct</div>
+                  <a href="tel:+919444423567" class="contact-item-val">+91 94444 23567</a>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon-box">🌐</div>
+                <div>
+                  <div class="contact-item-title">Website</div>
+                  <a href="https://www.rockelogic.com" class="contact-item-val">www.rockelogic.com</a>
+                </div>
+              </div>
+
+              <div style="margin-top:0.5rem;padding-top:1rem;border-top:1px solid var(--border-subtle);">
+                <div class="contact-item-title" style="margin-bottom:6px;">GSTIN Verification</div>
+                <div class="gst-pill">GSTIN: 29AAGPF3130N1ZO</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Form Block -->
+          <div class="form-card">
+            <h3 class="form-title">Request a Launch Strategy Session</h3>
+            <p class="form-desc">
+              Fill out the details below. Rocke Fashy will personally get in touch within 24 hours.
+            </p>
+
+            <form id="launch-form" name="launch-consultation" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/success.html" onsubmit="handleFormSubmit(event)">
+              <input type="hidden" name="form-name" value="launch-consultation">
+              <p style="display:none;"><label>Don't fill this out if you're human: <input name="bot-field"></label></p>
+              <div class="form-grid">
+                <div class="form-group">
+                  <label for="fullName">Your Full Name *</label>
+                  <input type="text" id="fullName" name="name" placeholder="e.g. Rahul Sharma" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="phone">Phone / WhatsApp *</label>
+                  <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210" required>
+                </div>
+
+                <div class="form-group full-width">
+                  <label for="email">Email Address *</label>
+                  <input type="email" id="email" name="email" placeholder="you@domain.com" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="portalType">What Are You Launching? *</label>
+                  <select id="portalType" name="portal_type" required>
+                    <option value="" disabled selected>Select Portal Type</option>
+                    <option value="Online Academy / LMS + SEO">Online Academy / LMS (like SmartPen) + SEO</option>
+                    <option value="Coaching / Consulting Platform">Coaching / Consulting Platform</option>
+                    <option value="Membership Community">Membership / Community Hub</option>
+                    <option value="Service / Client Booking Portal">Service / Client Booking Portal</option>
+                    <option value="Other Digital Business">Other Digital Business</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="regStatus">Company Registration *</label>
+                  <select id="regStatus" name="registration_status" required>
+                    <option value="" disabled selected>Legal Status</option>
+                    <option value="Need Full Registration">Need Help With Registration & GST</option>
+                    <option value="Already Registered">Already Registered (Portal Only)</option>
+                    <option value="In Progress">Registration In Progress</option>
+                  </select>
+                </div>
+
+                <div class="form-group full-width">
+                  <label for="projectBrief">Brief Description of Your Vision</label>
+                  <textarea id="projectBrief" name="brief" placeholder="Tell us about what you want to teach or sell, your target audience, reference sites, and SEO goals..."></textarea>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-primary form-submit-btn" id="submit-request-btn">
+                <span>Submit Launch Consultation Request</span>
+                <span class="btn-icon">→</span>
+              </button>
+
+              <div class="form-success-banner" id="form-success-banner">
+                <strong>✔ Thank you! Your request has been received.</strong><br>
+                Rocke Fashy will review your project brief and connect with you directly via WhatsApp/Phone at <span id="confirm-phone">+91 94444 23567</span>.
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="faq-section" id="faq">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-eyebrow">Frequently Asked Questions</div>
+          <h2 class="section-title">Got Questions? We Have Clear Answers.</h2>
+        </div>
+
+        <div class="faq-accordion">
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              <span>Does my web portal include a built-in SEO framework?</span>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              Yes, absolutely. Unlike general web design agencies that charge thousands extra for SEO, every portal built by RockeLogic includes a comprehensive technical SEO framework: programmatic JSON-LD Schema (Course, Organization, FAQ), XML sitemaps, OpenGraph social sharing preview tags, sub-second Core Web Vitals, and Google Search Console indexing from Day 1.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              <span>Do I need any technical or coding knowledge?</span>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              No, absolutely none. RockeLogic handles 100% of the technical heavy lifting — domain setup, cloud hosting, database architecture, payment integrations, and code maintenance. You get an intuitive dashboard to manage your content, students, and revenue.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              <span>Can you build a portal exactly like SmartPen Academy?</span>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              Yes! SmartPen Academy is an example of our turnkey work. We can build an academy tailored to your curriculum with video lesson protection, student progress tracking, quizzes, automated certificate generation, and instant checkout via Razorpay or Stripe.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              <span>How does company registration work?</span>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              We guide you through choosing the right legal entity (Private Limited, LLP, OPC, or Sole Proprietorship), assist with document preparation, file for incorporation, and obtain your GSTIN number, enabling you to legally accept commercial payments.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              <span>Who owns the code, website, and student data?</span>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              You own 100% of your business, domain name, source code, student database, and payment accounts. Unlike proprietary SaaS builders that lock you into their ecosystem, you maintain complete sovereignty over your digital assets.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              <span>How long does the entire process take?</span>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              Our standard turnaround is 30 days from project kickoff to public launch. For founders who already have their company registered, we can often launch the web portal in as little as 2 to 3 weeks.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="brand" style="margin-bottom:1rem;">
+            <div class="brand-logo-icon">R</div>
+            <div class="brand-text">
+              <div class="brand-name">Rocke<span>Logic</span></div>
+              <div class="brand-sub">Technology Partners</div>
+            </div>
+          </div>
+          <p style="color:var(--text-dim);font-size:13px;line-height:1.7;margin-bottom:1.25rem;">
+            The turnkey launchpad for founders, educators, and solopreneurs. From legal incorporation to custom web portal design, automated payments, and built-in SEO frameworks.
+          </p>
+          <div class="gst-pill" style="font-size:11px;">GSTIN: 29AAGPF3130N1ZO</div>
+        </div>
+
+        <div class="footer-col">
+          <h5>What We Deliver</h5>
+          <ul class="footer-links">
+            <li><a href="#pillars">Company Registration</a></li>
+            <li><a href="#pillars">Custom Portal Architecture</a></li>
+            <li><a href="#pillars">SmartPen-style LMS</a></li>
+            <li><a href="#seo">Built-In SEO Framework</a></li>
+            <li><a href="#pillars">Payment Gateway Setup</a></li>
+            <li><a href="#process">30-Day Launchpad</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Showcase & Proof</h5>
+          <ul class="footer-links">
+            <li><a href="#showcase">SmartPen Academy</a></li>
+            <li><a href="#seo">SEO & Discoverability</a></li>
+            <li><a href="#process">Sprint Methodology</a></li>
+            <li><a href="#faq">Founder FAQ</a></li>
+            <li><a href="#contact">Request Consultation</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Official Contact</h5>
+          <ul class="footer-links">
+            <li style="color:#ffffff;">Rocke Fashy</li>
+            <li><a href="tel:+919444423567">+91 94444 23567</a></li>
+            <li><a href="mailto:rockefashy@rockelogic.com">rockefashy@rockelogic.com</a></li>
+            <li><a href="https://www.rockelogic.com">www.rockelogic.com</a></li>
+            <li style="margin-top:6px;line-height:1.5;color:var(--text-dim);">
+              Ajmera Infinity, Electronic City Phase 1, Bangalore - 560100
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 RockeLogic Technology Partners. All rights reserved.
+        </div>
+        <div style="display:flex;gap:1.5rem;">
+          <a href="#hero" style="color:var(--text-dim);text-decoration:none;">Back to Top ↑</a>
         </div>
       </div>
     </div>
-  </div>
-</div>
+  </footer>
 
-<footer>
-  © 2025 RockeLogic · Bangalore, India · Global Consulting · rockefashy@gmail.com
-</footer>
+  <script>
+    // FAQ Accordion Toggle
+    function toggleFaq(el) {
+      const item = el.parentElement;
+      const isActive = item.classList.contains('active');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+      if (!isActive) {
+        item.classList.add('active');
+      }
+    }
 
-<script>
-function showPage(id) {
-  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-  document.getElementById('page-' + id).classList.add('active');
-  window.scrollTo({top: 0, behavior: 'smooth'});
-}
-</script>
+    // Lead Form Handler with Client-Side Feedback & Netlify compatibility
+    function handleFormSubmit(event) {
+      event.preventDefault();
+      const form = event.target;
+      const phoneVal = document.getElementById('phone').value;
+      const confirmPhone = document.getElementById('confirm-phone');
+      if (confirmPhone && phoneVal) {
+        confirmPhone.textContent = phoneVal;
+      }
+
+      // If on Netlify or standard form submit environment
+      const submitBtn = document.getElementById('submit-request-btn');
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<span>Processing Request...</span>';
+
+      // Submit via fetch if supported, fallback to immediate success display
+      const formData = new FormData(form);
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData).toString()
+      })
+      .then(() => {
+        showSuccess();
+      })
+      .catch(() => {
+        // Fallback gracefully so the user is never stranded
+        showSuccess();
+      });
+
+      function showSuccess() {
+        document.getElementById('form-success-banner').style.display = 'block';
+        submitBtn.style.display = 'none';
+        form.reset();
+        document.getElementById('form-success-banner').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+# Netlify Configuration for RockeLogic Technology Partners
+
+[build]
+  publish = "."
+
+# Security and Performance Headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+
+# Cache static assets
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# Optional redirect for canonical domain www
+[[redirects]]
+  from = "https://rockelogic.com/*"
+  to = "https://www.rockelogic.com/:splat"
+  status = 301
+  force = true
