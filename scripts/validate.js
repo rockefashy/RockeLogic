@@ -188,7 +188,9 @@ const assetRefs = [
   'favicon.svg',
   'apple-touch-icon.png',
   'site.webmanifest',
-  'og-image.png'
+  'og-image.png',
+  'sitemap.xml',
+  'robots.txt'
 ];
 for (const asset of assetRefs) {
   const assetPath = path.join(__dirname, '..', asset);
