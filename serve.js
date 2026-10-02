@@ -4,14 +4,21 @@ const path = require('path');
 
 const PORT = 3000;
 const MIME_TYPES = {
-  '.html': 'text/html',
-  '.css': 'text/css',
-  '.js': 'text/javascript',
-  '.json': 'application/json',
+  '.html': 'text/html; charset=utf-8',
+  '.css': 'text/css; charset=utf-8',
+  '.js': 'text/javascript; charset=utf-8',
+  '.json': 'application/json; charset=utf-8',
   '.png': 'image/png',
   '.jpg': 'image/jpeg',
+  '.jpeg': 'image/jpeg',
+  '.webp': 'image/webp',
   '.svg': 'image/svg+xml',
   '.ico': 'image/x-icon',
+  '.woff': 'font/woff',
+  '.woff2': 'font/woff2',
+  '.ttf': 'font/ttf',
+  '.xml': 'application/xml',
+  '.txt': 'text/plain; charset=utf-8'
 };
 
 const server = http.createServer((req, res) => {
@@ -59,9 +66,27 @@ const server = http.createServer((req, res) => {
 
   // Handle GET static files
   let reqPath = decodeURI(req.url.split('?')[0]);
-  if (reqPath === '/') reqPath = '/index.html';
+  if (reqPath === '/' || reqPath === '') reqPath = '/index.html';
   
-  let filePath = path.join(__dirname, reqPath);
+  // Normalize path and resolve within __dirname
+  const cleanedPath = reqPath.replace(/^[/\\]+/, '');
+  const rootDir = path.resolve(__dirname);
+  const filePath = path.resolve(rootDir, cleanedPath);
+
+  // Security check 1: Prevent directory traversal outside root directory
+  if (!filePath.startsWith(rootDir + path.sep) && filePath !== rootDir) {
+    res.writeHead(403, { 'Content-Type': 'text/html' });
+    res.end('<h1>403 Forbidden</h1>');
+    return;
+  }
+
+  // Security check 2: Deny access to hidden dotfiles (e.g. .git, .env, .gitignore)
+  const relPath = path.relative(rootDir, filePath);
+  if (relPath.split(path.sep).some(segment => segment.startsWith('.'))) {
+    res.writeHead(403, { 'Content-Type': 'text/html' });
+    res.end('<h1>403 Forbidden</h1>');
+    return;
+  }
 
   fs.stat(filePath, (err, stats) => {
     if (err || !stats.isFile()) {

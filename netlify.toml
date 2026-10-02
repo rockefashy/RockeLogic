@@ -26,3 +26,35 @@
   to = "https://www.rockelogic.com/:splat"
   status = 301
   force = true
+
+# Restrict public access to internal server and configuration files
+[[redirects]]
+  from = "/serve.js"
+  to = "/index.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/leads.json"
+  to = "/index.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/package.json"
+  to = "/index.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/package-lock.json"
+  to = "/index.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/scripts/*"
+  to = "/index.html"
+  status = 404
+  force = true
+
