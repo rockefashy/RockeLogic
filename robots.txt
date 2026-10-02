@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.rockelogic.com/sitemap.xml
+Sitemap: https://rockelogic.com/sitemap.xml
