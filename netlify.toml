@@ -20,12 +20,6 @@
   [headers.values]
     Cache-Control = "public, max-age=0, must-revalidate"
 
-# Optional redirect for canonical domain www
-[[redirects]]
-  from = "https://rockelogic.com/*"
-  to = "https://www.rockelogic.com/:splat"
-  status = 301
-  force = true
 
 # Restrict public access to internal server and configuration files
 [[redirects]]
